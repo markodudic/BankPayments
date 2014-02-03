@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bank payments</string>
+    <string name="action_settings">Settings</string>
+    <string name="header_title">Domestic payment</string>
+    <string name="payment_type">PAYMENT TYPE</string>
+    <string name="pay_from">PAY FROM</string>
+    <string name="pay_to">PAY TO</string>
+    <string name="payment_data">PAYMENT DATA</string>
+    <string name="optional_data">OPTIONAL DATA</string>
+    <string name="new_payment">New payment</string>
+    <string name="from_template">From template</string>
+    <string name="button_next">NEXT</string>
+    <string name="debit_account">DEBIT ACCOUNT</string>
+    <string name="payment_amount">PAYMENT AMOUNT*</string>
+    <string name="execution_date">EXECUTION DATE*</string>
+    <string name="payment_date">15/02/2014</string>
+    <string name="payment_details">PAYMENT DETAILS*</string>
+    <string name="optional_data_1">Mike knight</string>
+    <string name="optional_data_2">12345678</string>
+   	<string name="optional_data_3">Lorem ipsum</string>
+    
+    
+    
+    <string-array name="payment_types">
+        <item>Standard payment</item>
+        <item>Universal payment</item>
+    </string-array>    
+    
+    <string-array name="pay_from">
+        <item>Single extended (JPY)\n1234567890123455</item>
+        <item>Europe (EUR)\n1234567890123455</item>
+    </string-array>  
+    
+    <string-array name="pay_to">
+        <item>CREDITOR NAME*\ncredit account</item>
+        <item>Europe (EUR)\n1234567890123455</item>
+    </string-array>      
+
+    <string-array name="payment_currency">
+        <item>EUR</item>
+        <item>USD</item>
+    </string-array>      
+</resources>

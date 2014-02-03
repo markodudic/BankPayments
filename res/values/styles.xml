@@ -1,0 +1,149 @@
+<resources>
+   <style name="HeaderTitleMenu">
+       <item name="android:layout_width">60.0dip</item>
+       <item name="android:layout_height">fill_parent</item>
+   </style>
+   
+   <style name="HeaderMenuImage">
+       <item name="android:layout_width">25dp</item>
+       <item name="android:layout_height">25dp</item>
+       <item name="android:layout_gravity">center_vertical</item>
+   </style>
+   
+   <style name="HeaderLogoImage">
+       <item name="android:layout_width">25dp</item>
+       <item name="android:layout_height">wrap_content</item>
+   </style>
+   
+   <style name="HeaderTitle">
+       <item name="android:background">@color/background_header</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">48.0dip</item>
+   </style>
+      
+   <style name="HeaderTitleText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">48.0dip</item>
+       <item name="android:layout_marginLeft">10dp</item>
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:background">@color/background_header</item>
+       <item name="android:shadowColor">@color/shadow</item>
+   </style>       
+
+   <style name="HeaderStepImages">
+       <item name="android:layout_width">25dp</item>
+       <item name="android:layout_height">wrap_content</item>
+   </style>
+  
+   <style name="Content">
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:padding">8.0dip</item>
+   </style>
+
+   <style name="ContentSectionTitle">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/content_title</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_marginTop">16dip</item>
+   </style>   
+
+   <style name="ContentSectionTitle_Small" parent="@style/ContentSectionTitle">
+       <item name="android:layout_marginTop">0dip</item>
+       <item name="android:layout_width">wrap_content</item>
+   </style>  
+   
+   <style name="ContentSectionLayout">
+       <item name="android:layout_marginTop">16dip</item>
+   </style> 
+      
+   <style name="ContentSectionLabel">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/content_label</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_marginTop">8.0dip</item>
+   </style>  
+
+   <style name="ContentSectionLabel_Small" parent="@style/ContentSectionLabel">
+       <item name="android:layout_width">wrap_content</item>
+   </style> 
+   
+   <style name="ContentLabel">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/content_label</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">wrap_content</item>
+   </style>  
+
+   <style name="ContentText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/content_text</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:background">@drawable/dr_border</item>
+       <item name="android:layout_marginTop">8.0dip</item>
+       <item name="android:padding">8dp</item>
+   </style>  
+
+   <style name="ContentText_Big" parent="@style/ContentText">
+       <item name="android:layout_width">fill_parent</item>
+   </style>  
+   
+   <style name="ContentTextArea" parent="@style/ContentText">
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">120dip</item>
+       <item name="android:gravity">top</item>
+   </style>
+   
+   <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/content_label</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+   </style>
+        
+        
+   <style name="BorderHorizontal">
+       <item name="android:background">@color/background_lightblue</item>
+       <item name="android:layout_weight">0.0</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">2.0dip</item>
+   </style>
+
+   <style name="Spinner">
+       <item name="android:background">@drawable/dr_border</item>
+       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_marginTop">8.0dip</item>
+   </style>
+
+   <style name="Spinner_small" parent="@style/Spinner">
+       <item name="android:layout_width">wrap_content</item>
+   </style>
+   
+   <style name="SpinnerText">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/content_label</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:padding">8dp</item>
+   </style>
+ 
+    
+   <style name="ButtonNext">
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/title_text</item>
+       <item name="android:background">@drawable/dr_button</item>
+       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_height">40dp</item>
+       <item name="android:layout_marginTop">16dp</item>
+       <item name="android:gravity">center_vertical|center_horizontal</item>
+       
+   </style>
+   
+</resources>

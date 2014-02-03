@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HeaderTitle"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        style="@style/HeaderTitleMenu"
+        android:orientation="horizontal" >
+
+	    <ImageButton
+	        android:id="@+id/imageMenu"
+	        style="@style/HeaderMenuImage"
+	        android:src="@drawable/menu" />
+	    
+        <ImageView
+	        android:id="@+id/imageLogo"
+	        style="@style/HeaderLogoImage"
+        	android:src="@drawable/logo" />
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/header_title"
+        style="@style/HeaderTitleText"
+        android:layout_height="fill_parent"
+        android:text="@string/header_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+	    <ImageView
+	        android:id="@+id/imageStep1"
+	        style="@style/HeaderStepImages"
+	        android:src="@drawable/step1_pressed" />
+	
+	    <ImageView
+	        android:id="@+id/imageStep2"
+	        style="@style/HeaderStepImages"
+	        android:src="@drawable/step2" />
+	    
+	    <ImageView
+	        android:id="@+id/imageStep3"
+	        style="@style/HeaderStepImages"
+	        android:src="@drawable/step3" />
+    </LinearLayout>
+</LinearLayout>

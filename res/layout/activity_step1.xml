@@ -1,0 +1,200 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_app"
+    android:orientation="vertical" >
+
+    <include layout="@layout/fragment_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >    
+        
+        <LinearLayout
+	        style="@style/Content"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/payment_type"
+	            style="@style/ContentSectionTitle"
+	            android:text="@string/payment_type" />
+	
+	        <View style="@style/BorderHorizontal" />
+	
+		    <RadioGroup
+		        android:id="@+id/radioGroup1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		
+		        <RadioButton
+		            android:id="@+id/radio_new_payment"
+	                style="@style/CheckBox"
+	                android:text="@string/new_payment" />
+		
+		        <RadioButton
+	                android:id="@+id/radio_from_template"
+	                style="@style/CheckBox"
+	                android:text="@string/from_template" />
+		
+		    </RadioGroup>
+	    
+	
+		    <Spinner
+		        android:id="@+id/spinner_payment_types"
+		        style="@style/Spinner"
+		        android:entries="@array/payment_types" />
+	
+	        <TextView
+	            android:id="@+id/pay_from"
+	            style="@style/ContentSectionTitle"
+	            android:text="@string/pay_from" />
+	
+	        <View style="@style/BorderHorizontal" />
+	
+	        
+	        <TextView
+	            android:id="@+id/debit_account"
+	            style="@style/ContentSectionLabel"
+	            android:text="@string/debit_account" />
+	        
+		    <Spinner
+		        android:id="@+id/spinner_pay_from"
+		        style="@style/Spinner"
+		        android:entries="@array/pay_from" />
+	        
+		    
+	        <TextView
+	            android:id="@+id/pay_to"
+	            style="@style/ContentSectionTitle"
+	            android:text="@string/pay_to" />
+	
+	        <View style="@style/BorderHorizontal" />
+	
+		    <Spinner
+		        android:id="@+id/spinner_pay_to"
+		        style="@style/Spinner"
+		        android:entries="@array/pay_to" />
+	        
+	        
+	        <TextView
+	            android:id="@+id/payment_data"
+	            style="@style/ContentSectionTitle"
+	            android:text="@string/payment_data" />
+	
+	        <View style="@style/BorderHorizontal" />
+
+	        <LinearLayout
+		        android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+		        
+	            <EditText
+				    android:id="@+id/payment_amount"
+				    android:hint="@string/payment_amount"
+				    style="@style/ContentText"
+			        android:inputType="number"
+			        android:layout_weight="2" />	        
+		        
+		        <LinearLayout
+			        android:layout_width="0dip"
+					android:layout_height="0dip"
+					android:layout_weight="1" />
+	            
+		        <Spinner
+			        android:id="@+id/spinner_payment_currency"
+			        style="@style/Spinner_small"
+			        android:entries="@array/payment_currency"
+			        android:layout_weight="1" />
+	        </LinearLayout>	
+		        
+	        <LinearLayout
+		        android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+	        	
+	        	<TextView
+		            android:id="@+id/execution_date"
+		            style="@style/ContentSectionLabel_Small"
+		            android:text="@string/execution_date" />
+	        
+		        <LinearLayout
+			        android:layout_width="0dip"
+					android:layout_height="0dip"
+					android:layout_weight="1" />
+	        	
+	        	<TextView
+				    android:id="@+id/payment_date"
+				    android:text="@string/payment_date"
+				    style="@style/ContentText"
+				    android:onClick="showTimePickerDialog" />	        
+	        </LinearLayout>	
+	        		        
+            <EditText
+			    android:id="@+id/payment_details"
+			    android:hint="@string/payment_details"
+			    style="@style/ContentTextArea"
+		        android:inputType="text" />	        
+	        
+	        <LinearLayout
+		        android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				style="@style/ContentSectionLayout" >
+	
+	            <TextView
+		            android:id="@+id/optional_data"
+		            style="@style/ContentSectionTitle_Small"
+		            android:text="@string/optional_data" />
+		    	
+		    	<LinearLayout
+			        android:layout_width="0dip"
+					android:layout_height="0dip"
+					android:layout_weight="1" />
+		    
+			    <ImageView
+			        android:id="@+id/optional_data_arrow"
+			        style="@style/HeaderStepImages"
+			        android:src="@drawable/arrow_down" />
+	        </LinearLayout>
+	        
+	        <View style="@style/BorderHorizontal" />
+	
+	        <LinearLayout
+		        android:id="@+id/optional_data_layout"
+        		android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:visibility="gone" >
+			    
+		        <EditText
+				    android:id="@+id/optional_data_1"
+				    android:hint="@string/optional_data_1"
+				    style="@style/ContentText_Big"
+			        android:inputType="text" />	        
+			    		    
+	            <EditText
+				    android:id="@+id/optional_data_2"
+				    android:hint="@string/optional_data_2"
+				    style="@style/ContentText_Big"
+			        android:inputType="text" />	        
+	
+	            <EditText
+				    android:id="@+id/optional_data_3"
+				    android:hint="@string/optional_data_3"
+				    style="@style/ContentText_Big"
+			        android:inputType="text" />	        
+            </LinearLayout>
+            
+		    <Button
+		        android:id="@+id/button_next"
+		        style="@style/ButtonNext"
+		        android:text="@string/button_next" />
+
+            
+	    </LinearLayout>
+	    
+	</ScrollView>
+
+</LinearLayout>
