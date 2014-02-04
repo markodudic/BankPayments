@@ -12,7 +12,13 @@
     <string name="new_payment">New payment</string>
     <string name="from_template">From template</string>
     <string name="button_next">NEXT</string>
-    <string name="debit_account">DEBIT ACCOUNT</string>
+    <string name="button_edit">EDIT</string>
+    <string name="button_pay">PAY</string>
+   	<string name="button_yes">YES</string>
+   	<string name="button_no">NO</string>
+   	<string name="button_ok">OK</string>
+   	<string name="button_cancel">CANCEL</string>
+   	<string name="debit_account">DEBIT ACCOUNT</string>
     <string name="payment_amount">PAYMENT AMOUNT*</string>
     <string name="execution_date">EXECUTION DATE*</string>
     <string name="payment_date">15/02/2014</string>
@@ -20,7 +26,12 @@
     <string name="optional_data_1">Mike knight</string>
     <string name="optional_data_2">12345678</string>
    	<string name="optional_data_3">Lorem ipsum</string>
-    
+   	<string name="discard_title">Discard payment</string>
+   	<string name="discard_payment">Are you sure you want to discard the payment?</string>
+   	<string name="password_title">Password</string>
+   	<string name="enter_password">Vnesite podatke o geslu za potrditev plačila</string>
+   	<string name="password">Vnesite geslo</string>
+   					
     
     
     <string-array name="payment_types">
@@ -34,12 +45,44 @@
     </string-array>  
     
     <string-array name="pay_to">
-        <item>CREDITOR NAME*\ncredit account</item>
-        <item>Europe (EUR)\n1234567890123455</item>
+        <item>CREDITOR NAME*</item>
+        <item>Lorem Ipsum</item>
     </string-array>      
 
+    <string-array name="pay_to_account">
+        <item>CREDIT ACCOUNT*</item>
+        <item>1234567890123455</item>
+    </string-array>  
+    
     <string-array name="payment_currency">
         <item>EUR</item>
         <item>USD</item>
-    </string-array>      
+    </string-array> 
+    
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+     
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Find People</item>
+        <item >Photos</item>
+        <item >Communities</item>
+        <item >Pages</item>
+        <item >What\'s Hot</item>
+    </string-array>
+     
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_people</item>
+        <item>@drawable/ic_photos</item>
+        <item>@drawable/ic_communities</item>
+        <item>@drawable/ic_pages</item>
+        <item>@drawable/ic_whats_hot</item>
+    </array>
+     
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>  
 </resources>

@@ -23,6 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="si.halcom.bankpayments.Step2Activity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+         </activity>
+        <activity
+            android:name="si.halcom.bankpayments.Step3Activity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+         </activity>
     </application>
 
 </manifest>
