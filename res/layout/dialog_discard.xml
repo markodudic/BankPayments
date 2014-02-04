@@ -5,7 +5,6 @@
     android:orientation="vertical"
     style="@style/DialogContent" >
 
-
 	<TextView
         android:id="@+id/text"
         style="@style/DialogTitle"

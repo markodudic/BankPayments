@@ -9,6 +9,7 @@
     <string name="pay_to">PAY TO</string>
     <string name="payment_data">PAYMENT DATA</string>
     <string name="optional_data">OPTIONAL DATA</string>
+    <string name="system_data">SYSTEM DATA</string>
     <string name="new_payment">New payment</string>
     <string name="from_template">From template</string>
     <string name="button_next">NEXT</string>
@@ -31,9 +32,20 @@
    	<string name="password_title">Password</string>
    	<string name="enter_password">Vnesite podatke o geslu za potrditev plačila</string>
    	<string name="password">Vnesite geslo</string>
-   					
-    
-    
+   	<string name="pay_to_name">CREDITOR NAME</string>
+   	<string name="pay_to_account">CREDIT ACCOUNT</string>
+    <string name="payment_data_amount">PAYMENT AMOUNT:</string>
+    <string name="payment_data_date">EXECUTION DATE:</string>
+    <string name="payment_data_details">PAYMENT DETAILS:</string>
+    <string name="optional_data_payer_name">ULTIMATE PAYER NAME:</string>
+    <string name="optional_data_debtor_reference">DEBTOR REFERENCE:</string>
+    <string name="optional_data_creditor_reference">CREDITOR REFERENCE:</string>
+    <string name="optional_data_urgent_payment">URGENT PAYMENT:</string>
+    <string name="system_data_payment_status">PAYMENT STATUS:</string>
+    <string name="system_data_payment_id">PAYMENT ID:</string>
+    <string name="system_data_last_modified_by">LAST MODIFIED BY:</string>
+    <string name="system_data_last_modified">LAST MODIFIED:</string>
+        			
     <string-array name="payment_types">
         <item>Standard payment</item>
         <item>Universal payment</item>

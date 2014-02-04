@@ -32,11 +32,21 @@
        <item name="android:layout_width">25dp</item>
    </style>
 
+   <style name="HeaderMessageImage">
+       <item name="android:layout_width">50dp</item>
+       <item name="android:layout_height">50dp</item>
+       </style>
+   
    
    <style name="Content">
        <item name="android:padding">8.0dip</item>
    </style>
 
+   <style name="ContentData">
+       <item name="android:paddingLeft">16.0dip</item>
+       <item name="android:paddingRight">16.0dip</item>
+   </style>
+   
    <style name="ContentSectionTitle">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_title</item>
@@ -57,7 +67,12 @@
        <item name="android:layout_marginTop">8.0dip</item>
    </style>  
 
-   
+   <style name="ContentSectionLabelData">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/content_label_data</item>
+       <item name="android:layout_marginTop">0dip</item>
+   </style>
+      
    <style name="ContentLabel">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_label</item>
@@ -131,7 +146,7 @@
     
    <style name="DialogContent">
        <item name="android:padding">16.0dip</item>
-       <item name="android:background">@drawable/step1</item>
+       <item name="android:background">@drawable/dialog_background</item>
    </style>
      
    <style name="DialogTitle" parent="@style/DialogText">

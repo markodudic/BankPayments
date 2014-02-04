@@ -11,6 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >    
         
+        
         <LinearLayout
 	        style="@style/Content"
 	        android:layout_width="fill_parent"
@@ -18,6 +19,333 @@
 	        android:orientation="vertical" >
 
  
+ 	        <LinearLayout
+		        android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        
+		        <ImageView
+			        android:id="@+id/image_header_message"
+			        style="@style/HeaderMessageImage"
+		        	android:src="@drawable/message" />
+		        
+		        <TextView
+		            android:id="@+id/header_message"
+		            android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Lrem ipsum lorem ipsum lorem ipsum" />
+			</LinearLayout>        
+            
+            
+	        <TextView
+	            android:id="@+id/pay_from"
+	            android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ContentSectionTitle"
+	            android:text="@string/pay_from" />
+	
+	        <View 
+	            android:layout_width="fill_parent"
+		        style="@style/BorderHorizontal" />
+	
+	        
+	        <LinearLayout
+		        style="@style/ContentData"
+		        android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        
+		        <TextView
+		            android:id="@+id/debit_account"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/debit_account" />
+		        
+		        <TextView
+		            android:id="@+id/debit_account_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Single extended (JPY)\n1234567890123455" />
+			</LinearLayout>        
+	       
+	        
+	
+	        	    
+	        <TextView
+	            android:id="@+id/pay_to"
+	            android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ContentSectionTitle"
+	            android:text="@string/pay_to" />
+	
+	        <View 
+	            android:layout_width="fill_parent"
+		        style="@style/BorderHorizontal" />
+
+	      
+	        <LinearLayout
+		        style="@style/ContentData"
+		        android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        
+		        <TextView
+		            android:id="@+id/pay_to_name"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/pay_to_name" />
+		        
+		        <TextView
+		            android:id="@+id/pay_to_name_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Laura Kingsley" />
+
+		        <TextView
+		            android:id="@+id/pay_to_account"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/pay_to_account" />
+		        
+		        <TextView
+		            android:id="@+id/pay_to_account_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="985439859485934" />
+		        		        
+			</LinearLayout>   	        
+	        
+	        
+		    	        
+	        <TextView
+	            android:id="@+id/payment_data"
+	            android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ContentSectionTitle"
+	            android:text="@string/payment_data" />
+	
+	        <View 
+	            android:layout_width="fill_parent"
+		        style="@style/BorderHorizontal" />
+
+	        <LinearLayout
+		        style="@style/ContentData"
+		        android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        
+		        <TextView
+		            android:id="@+id/payment_data_amount"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/payment_data_amount" />
+		        
+		        <TextView
+		            android:id="@+id/payment_data_amount_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="220 EUR" />
+
+		        <TextView
+		            android:id="@+id/payment_data_details"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/payment_data_details" />
+		        
+		        <TextView
+		            android:id="@+id/payment_data_details_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Lorem ipsum lorem ipsum lorem ipsum" />		        		        
+			</LinearLayout>   	        
+	        
+	        
+	        
+	        <TextView
+	            android:id="@+id/optional_data"
+	            android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ContentSectionTitle"
+	            android:text="@string/optional_data" />
+	
+	        <View 
+	            android:layout_width="fill_parent"
+		        style="@style/BorderHorizontal" />
+	        
+	        	        
+	        <LinearLayout
+		        style="@style/ContentData"
+		        android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		        
+		        <TextView
+		            android:id="@+id/optional_data_payer_name"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_data_payer_name" />
+		        
+		        <TextView
+		            android:id="@+id/optional_data_payer_name_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Mike Knight" />
+
+		        <TextView
+		            android:id="@+id/optional_data_debtor_reference"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_data_debtor_reference" />
+		        
+		        		        		        
+		        <TextView
+		            android:id="@+id/optional_data_debtor_reference_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="8394893849382" />
+
+		        <TextView
+		            android:id="@+id/optional_data_creditor_reference"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_data_creditor_reference" />
+		        
+		        <TextView
+		            android:id="@+id/optional_data_creditor_reference_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="85439594385934859843590843" />	
+		            
+		        <TextView
+		            android:id="@+id/optional_data_urgent_payment"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_data_urgent_payment" />
+		        
+		        <TextView
+		            android:id="@+id/optional_data_urgent_payment_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Yes" />	
+			</LinearLayout> 
+			
+	        
+	        
+	        <LinearLayout
+		        android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				style="@style/ContentSectionLayout" >
+	
+	            <TextView
+		            android:id="@+id/system_data"
+		            android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					style="@style/ContentSectionTitle_Small"
+		            android:text="@string/system_data" />
+		    	
+		    	<LinearLayout
+			        android:layout_width="0dip"
+					android:layout_height="0dip"
+					android:layout_weight="1" />
+		    
+			    <ImageView
+			        android:id="@+id/optional_data_arrow"
+			        android:layout_height="wrap_content"
+					style="@style/HeaderStepImages"
+			        android:src="@drawable/arrow_down" />
+	        </LinearLayout>
+	        
+	        <View 
+	            android:layout_width="fill_parent"
+		        style="@style/BorderHorizontal" />
+	
+
+ 	        <LinearLayout
+		        android:id="@+id/system_data_layout"
+        		android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				style="@style/ContentData"
+		        android:visibility="gone" >
+			    
+		        <TextView
+		            android:id="@+id/system_data_payment_status"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/system_data_payment_status" />
+		        
+		        <TextView
+		            android:id="@+id/system_data_payment_status_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Prepared" />
+
+		        <TextView
+		            android:id="@+id/system_data_payment_id"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/system_data_payment_id" />
+		        
+		        		        		        
+		        <TextView
+		            android:id="@+id/system_data_payment_id_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="SKJJDD93940UDOIDO3993" />
+
+		        <TextView
+		            android:id="@+id/system_data_last_modified_by"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/system_data_last_modified_by" />
+		        
+		        <TextView
+		            android:id="@+id/system_data_last_modified_by_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="Legal3 representativeCABP" />	
+		            
+		        <TextView
+		            android:id="@+id/system_data_last_modified"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/system_data_last_modified" />
+		        
+		        <TextView
+		            android:id="@+id/system_data_last_modified_data"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabelData"
+		            android:text="04.02.2014 09:00" />	
+        
+            </LinearLayout>           
             
             
             <LinearLayout

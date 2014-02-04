@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class Step2Activity extends Activity {
@@ -21,6 +22,7 @@ public class Step2Activity extends Activity {
 	private Dialog dialogDiscard;
 	private Dialog dialogPassword;
 	final Context context = this;
+	private boolean isSystemData = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +58,8 @@ public class Step2Activity extends Activity {
 		// dialogPassword
 		dialogPassword = new Dialog(this,R.style.Dialog);
 		dialogPassword.setContentView(R.layout.dialog_password); 
-		dialogPassword.setTitle(R.string.password_title);
+		//dialogPassword.setTitle(R.string.password_title);
+		dialogPassword.getWindow().setBackgroundDrawable(new ColorDrawable(0));
 
 		Button dialogPasswordButtonOk = (Button) dialogPassword.findViewById(R.id.button_ok);
 		dialogPasswordButtonOk.setOnClickListener(new OnClickListener() {
@@ -73,6 +76,21 @@ public class Step2Activity extends Activity {
 			@Override
 			public void onClick(View v) {
 				dialogPassword.dismiss();
+			}
+		});	
+		
+		final LinearLayout lSystemData = (LinearLayout) findViewById(R.id.system_data_layout);
+		ImageView ivSystemData = (ImageView) findViewById(R.id.optional_data_arrow);
+		ivSystemData.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (isSystemData) {
+					lSystemData.setVisibility(LinearLayout.GONE);
+					isSystemData = false;
+				} else {
+					lSystemData.setVisibility(LinearLayout.VISIBLE);
+					isSystemData = true;
+				}
 			}
 		});		
 							
