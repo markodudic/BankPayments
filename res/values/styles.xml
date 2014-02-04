@@ -128,8 +128,23 @@
        <item name="android:gravity">center</item>
    </style>
    
+    
+   <style name="DialogContent">
+       <item name="android:padding">16.0dip</item>
+       <item name="android:background">@drawable/step1</item>
+   </style>
+     
+   <style name="DialogTitle" parent="@style/DialogText">
+       <item name="android:textStyle">bold</item>
+       <item name="android:textSize">20.0sp</item>
+       <item name="android:padding">10dp</item>
+    </style>
+      
 	<style name="Dialog" parent="@android:style/Theme.Dialog">
-	    <item name="android:windowTitleStyle">@style/Dialog_style</item>
+	    <item name="android:windowNoTitle">true</item>
+        <!-- item name="android:windowTitleStyle">@style/Dialog_style</item>
+		<item name="android:background">@drawable/step1</item>
+	    <item name="android:windowBackground">@android:color/transparent</item-->
 	</style>
 	
 	<style name="Dialog_style" parent="android:Widget.TextView">

@@ -5,11 +5,13 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -29,9 +31,11 @@ public class Step2Activity extends Activity {
 		
 		// dialogDiscard
 		dialogDiscard = new Dialog(this,R.style.Dialog);
-		dialogDiscard.setContentView(R.layout.dialog_yesno); 
-		dialogDiscard.setTitle(R.string.discard_title);
-
+		dialogDiscard.setContentView(R.layout.dialog_discard); 
+		//dialogDiscard.setTitle(R.string.discard_title);
+		dialogDiscard.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+    
+	    
 		Button dialogButtonYes = (Button) dialogDiscard.findViewById(R.id.button_yes);
 		dialogButtonYes.setOnClickListener(new OnClickListener() {
 			@Override

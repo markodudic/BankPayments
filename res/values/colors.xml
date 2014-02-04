@@ -18,6 +18,7 @@
 -->
 
 <resources>
+    <color name="transparent_color">#00000000</color>
     <color name="background_app">#fff</color>
     <color name="background_header">#009fdd</color>
     <color name="background_lightblue">#009fdd</color>

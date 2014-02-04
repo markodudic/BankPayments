@@ -3,10 +3,17 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/background_app"
-	style="@style/Content" >
+    style="@style/DialogContent" >
 
 
+	<TextView
+        android:id="@+id/text"
+        style="@style/DialogTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discard_title" />
+    
+	
 	<TextView
         android:id="@+id/text"
         style="@style/DialogText"
