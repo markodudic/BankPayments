@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:enabled="false"
+    style="@style/Content"
+	android:orientation="horizontal" >
+    
+	    <ImageView
+	        android:id="@+id/imageStep1"
+	        android:layout_height="wrap_content"
+	       	style="@style/HeaderStepImages"
+	        android:src="@drawable/step1" />
+	
+	    <ImageView
+	        android:id="@+id/imageStep2"
+	        android:layout_height="wrap_content"
+	       	style="@style/HeaderStepImages"
+	        android:src="@drawable/step2" />
+	    
+	    <ImageView
+	        android:id="@+id/imageStep3"
+	        android:layout_height="wrap_content"
+	       	style="@style/HeaderStepImages"
+	        android:src="@drawable/step3" />
+
+</LinearLayout>

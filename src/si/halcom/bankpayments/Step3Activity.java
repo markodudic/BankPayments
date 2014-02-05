@@ -1,33 +1,18 @@
 package si.halcom.bankpayments;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-
 import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.res.Configuration;
-import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.LayoutParams;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.DatePicker;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-public class Step3Activity extends Activity {
+public class Step3Activity extends ActionBarActivity {
 
 
 	
@@ -36,6 +21,16 @@ public class Step3Activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_step3);
 		
+
+		ActionBar actionBar = getSupportActionBar();
+	    actionBar.setDisplayShowCustomEnabled(true);
+	    
+		LayoutInflater inflator = getLayoutInflater();
+		View v = inflator.inflate(R.layout.action_bar_icons, null);
+		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+
+		actionBar.setCustomView(v, lp);
+
 		setHeaderStepImages();
 		
 	}

@@ -1,23 +1,25 @@
 package si.halcom.bankpayments;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.LayoutParams;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-public class Step2Activity extends Activity {
+public class Step2Activity extends ActionBarActivity {
 
 	private Dialog dialogDiscard;
 	private Dialog dialogPassword;
@@ -29,6 +31,16 @@ public class Step2Activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_step2);
 		
+		ActionBar actionBar = getSupportActionBar();
+	    actionBar.setDisplayShowCustomEnabled(true);
+	    actionBar.setDisplayHomeAsUpEnabled(true);
+	    
+		LayoutInflater inflator = getLayoutInflater();
+		View v = inflator.inflate(R.layout.action_bar_icons, null);
+		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+
+		actionBar.setCustomView(v, lp);
+
 		setHeaderStepImages();
 		
 		// dialogDiscard
@@ -108,11 +120,17 @@ public class Step2Activity extends Activity {
 		imageStep3.setImageResource(R.drawable.step3);
 	}
 	
-	public void showEditStep(View view) {
+	public void showEditDialog(View view) {
 		dialogDiscard.show();
 	}
 	
-	public void showPayStep(View view) {
+	public void showPayDialog(View view) {
 		dialogPassword.show();
 	}	
+	
+	@Override
+	public Intent getSupportParentActivityIntent() {
+		dialogDiscard.show();
+		return null;
+	}
 }

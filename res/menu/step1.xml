@@ -1,9 +1,11 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:BankPayments="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/step1"
+          android:icon="@drawable/step1"
+          style="@style/HeaderStepImages"
+          BankPayments:showAsAction="ifRoom"/>
+    <item android:id="@+id/step2"
+          android:icon="@drawable/step2"
+          style="@style/HeaderStepImages"
+          BankPayments:showAsAction="ifRoom" />
 </menu>

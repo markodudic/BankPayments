@@ -3,23 +3,27 @@ package si.halcom.bankpayments;
 import java.util.Calendar;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.LayoutParams;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-public class Step1Activity extends Activity {
+public class Step1Activity extends ActionBarActivity {
 /*
 	private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -37,7 +41,7 @@ public class Step1Activity extends Activity {
  
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
-    */
+    */ 
     private TextView tvDisplayDate;
 	
 	private int year;
@@ -47,10 +51,23 @@ public class Step1Activity extends Activity {
 	
 	private boolean isOptionalData = false;
 	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_step1);
+		
+		ActionBar actionBar = getSupportActionBar();
+	    actionBar.setDisplayShowCustomEnabled(true);
+	    //actionBar.setDisplayHomeAsUpEnabled(true);
+	    
+		LayoutInflater inflator = getLayoutInflater();
+		View v = inflator.inflate(R.layout.action_bar_icons, null);
+		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+
+		actionBar.setCustomView(v, lp);
+		
+		
 		/*
 		
 		mTitle = mDrawerTitle = getTitle();
@@ -130,15 +147,6 @@ public class Step1Activity extends Activity {
 		
 		setCurrentDateOnView();
 
-		
-		ImageButton imageMenu = (ImageButton) findViewById(R.id.imageMenu);
-		imageMenu.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-
-			
-			}
-		});
 
 		
 		tvDisplayDate = (TextView) findViewById(R.id.payment_date);
@@ -168,13 +176,13 @@ public class Step1Activity extends Activity {
 		
 	}
 
-	/*
+	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.main, menu);
+        //getMenuInflater().inflate(R.menu.step1, menu);
         return true;
     }
- 
+ /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
@@ -310,4 +318,6 @@ public class Step1Activity extends Activity {
 		Intent intent = new Intent(this, Step2Activity.class);
 		startActivity(intent);
 	}
+	
+	
 }
