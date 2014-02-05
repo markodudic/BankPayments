@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -141,7 +142,7 @@ public class Step1Activity extends ActionBarActivity {
         
         
         */
-		setHeaderStepImages();
+
 		
 		addListenerOnSpinnerItemSelection();
 		
@@ -166,16 +167,30 @@ public class Step1Activity extends ActionBarActivity {
 			public void onClick(View v) {
 				if (isOptionalData) {
 					lOptionalData.setVisibility(LinearLayout.GONE);
+					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+					ivOptionalData.setImageResource(R.drawable.arrow_down);
 					isOptionalData = false;
 				} else {
 					lOptionalData.setVisibility(LinearLayout.VISIBLE);
+					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+					ivOptionalData.setImageResource(R.drawable.arrow_up);
 					isOptionalData = true;
 				}
 			}
 		});
 		
+
+		setHeaderStepImages();
 	}
 
+	
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page);
+		scrollPage.fullScroll(View.FOCUS_UP);
+	}
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -264,7 +279,7 @@ public class Step1Activity extends ActionBarActivity {
 	    spinner.setAdapter(mAdapter);
 
 	    spinner = (Spinner) findViewById(R.id.spinner_pay_to_account);
-	    mAdapter = ArrayAdapter.createFromResource(this, R.array.pay_to_account, R.layout.spinner_item);
+	    mAdapter = ArrayAdapter.createFromResource(this, R.array.pay_to_account, R.layout.spinner_item_disabled);
 	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 	    spinner.setAdapter(mAdapter);
 	    
@@ -304,13 +319,14 @@ public class Step1Activity extends ActionBarActivity {
 	};
 	
 	private void setHeaderStepImages() {
-		ImageView imageStep1 = (ImageView) findViewById(R.id.imageStep1);
-		ImageView imageStep2 = (ImageView) findViewById(R.id.imageStep2);
-		ImageView imageStep3 = (ImageView) findViewById(R.id.imageStep3);
-		
-		imageStep1.setImageResource(R.drawable.step1_pressed);
-		imageStep2.setImageResource(R.drawable.step2);
-		imageStep3.setImageResource(R.drawable.step3);
+		TextView textStep1 = (TextView) findViewById(R.id.textStep1);
+		TextView textStep2 = (TextView) findViewById(R.id.textStep2);
+		TextView textStep3 = (TextView) findViewById(R.id.textStep3);
+
+		textStep1.setBackgroundResource(R.drawable.dr_step);
+		textStep2.setBackgroundResource(R.drawable.dr_step_disabled);
+		textStep3.setBackgroundResource(R.drawable.dr_step_disabled);
+
 	}
 	
 

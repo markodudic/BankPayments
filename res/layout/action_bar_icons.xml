@@ -2,25 +2,22 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:enabled="false"
-    style="@style/Content"
-	android:orientation="horizontal" >
+    android:orientation="horizontal" >
     
-	    <ImageView
-	        android:id="@+id/imageStep1"
-	        android:layout_height="wrap_content"
-	       	style="@style/HeaderStepImages"
-	        android:src="@drawable/step1" />
-	
-	    <ImageView
-	        android:id="@+id/imageStep2"
-	        android:layout_height="wrap_content"
-	       	style="@style/HeaderStepImages"
-	        android:src="@drawable/step2" />
-	    
-	    <ImageView
-	        android:id="@+id/imageStep3"
-	        android:layout_height="wrap_content"
-	       	style="@style/HeaderStepImages"
-	        android:src="@drawable/step3" />
+        <TextView
+            android:id="@+id/textStep1"
+            style="@style/HeaderStep"
+       		android:text="1" />
+
+        <TextView
+            android:id="@+id/textStep2"
+            style="@style/HeaderStep"
+       		android:text="2" />
+        	                
+        <TextView
+            android:id="@+id/textStep3"
+            style="@style/HeaderStep"
+       		android:text="3" />
+
 
 </LinearLayout>

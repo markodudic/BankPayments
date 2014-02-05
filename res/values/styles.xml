@@ -2,7 +2,7 @@
     
     <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat.Light">
         <item name="actionBarStyle">@style/MyActionBar</item>
-    	<item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_holo_dark</item>
+    	<item name="homeAsUpIndicator">@drawable/up_indicator</item>
     </style>
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
@@ -41,21 +41,49 @@
        <item name="android:layout_marginLeft">10dp</item>
        <item name="android:gravity">center_vertical</item>
        <item name="android:background">@color/background_header</item>
-       <item name="android:shadowColor">@color/shadow</item>
    </style>       
 
    <style name="HeaderStepImages">
        <item name="android:layout_width">25dp</item>
    </style>
 
+   <style name="HeaderStep">
+       <item name="android:textSize">14.0sp</item>
+       <item name="android:textColor">@color/background_header</item>
+       <item name="android:layout_height">25.0dip</item>
+       <item name="android:layout_width">25.0dip</item>
+       <item name="android:background">@drawable/dr_step</item>
+       <item name="android:layout_gravity">center_vertical</item>
+  	   <item name="android:gravity">center</item>
+  	   <item name="android:layout_marginRight">8.0dip</item>
+   </style> 
+   
+   <style name="HeaderStep_disabled" parent="@style/HeaderStep">
+       <item name="android:background">@drawable/dr_step_disabled</item>
+   </style> 
+   
+   
+   
+   <style name="HeaderMessage">
+       <item name="android:background">@color/background_app</item>
+       <item name="android:layout_marginTop">10dp</item>
+       <item name="android:layout_marginBottom">10dp</item>
+   </style>
+   
    <style name="HeaderMessageImage">
        <item name="android:layout_width">50dp</item>
        <item name="android:layout_height">50dp</item>
-       </style>
+   </style>
+
    
-   
+   <style name="OptionalDataImage">
+       <item name="android:layout_width">25dp</item>
+       <item name="android:layout_marginTop">5dp</item>
+   </style>
+          
    <style name="Content">
        <item name="android:padding">8.0dip</item>
+       <item name="android:background">@color/background_section</item>
    </style>
 
    <style name="ContentData">
@@ -66,7 +94,7 @@
    <style name="ContentSectionTitle">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_title</item>
-       <item name="android:layout_marginTop">16dip</item>
+       <item name="android:layout_marginTop">8dip</item>
    </style>   
 
    <style name="ContentSectionTitle_Small" parent="@style/ContentSectionTitle">
@@ -109,15 +137,19 @@
        <item name="android:gravity">top</item>
    </style>
    
+   <style name="RadioGroup">
+       <item name="android:paddingTop">8.0dip</item>
+   </style>
+   
    <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
        <item name="android:textSize">16.0sp</item>
        <item name="android:textColor">@color/content_label</item>
-       <item name="android:button">@drawable/btn_check_holo_light</item>
+       <item name="android:button">@drawable/radio_button</item>
    </style>
         
         
    <style name="BorderHorizontal">
-       <item name="android:background">@color/background_lightblue</item>
+       <item name="android:background">@color/background_border</item>
        <item name="android:layout_weight">0.0</item>
        <item name="android:layout_height">2.0dip</item>
    </style>
@@ -131,7 +163,10 @@
        <item name="android:background">@drawable/dr_spinner_error</item>
    </style>
 
-   
+    <style name="Spinner_disabled" parent="@style/Spinner">
+       <item name="android:background">@drawable/dr_spinner_disabled</item>
+   </style>
+     
    <style name="SpinnerText">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_label</item>
@@ -142,13 +177,18 @@
    <style name="SpinnerText_error" parent="@style/SpinnerText">
        <item name="android:textColor">@color/content_label_error</item>
    </style>
-       
+
+   <style name="SpinnerText_disabled" parent="@style/SpinnerText">
+       <item name="android:textColor">@color/content_label_disabled</item>
+   </style>
+   
    <style name="ButtonNext">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/title_text</item>
        <item name="android:background">@drawable/dr_button</item>
        <item name="android:layout_height">40dp</item>
-       <item name="android:layout_marginTop">16dp</item>
+       <item name="android:layout_marginTop">24dp</item>
+       <item name="android:layout_marginBottom">24dp</item>
        <item name="android:gravity">center_vertical|center_horizontal</item>
    </style>
    

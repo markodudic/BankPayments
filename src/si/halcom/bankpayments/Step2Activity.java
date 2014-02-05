@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class Step2Activity extends ActionBarActivity {
@@ -98,9 +99,13 @@ public class Step2Activity extends ActionBarActivity {
 			public void onClick(View v) {
 				if (isSystemData) {
 					lSystemData.setVisibility(LinearLayout.GONE);
+					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+					ivOptionalData.setImageResource(R.drawable.arrow_down);
 					isSystemData = false;
 				} else {
 					lSystemData.setVisibility(LinearLayout.VISIBLE);
+					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+					ivOptionalData.setImageResource(R.drawable.arrow_up);
 					isSystemData = true;
 				}
 			}
@@ -111,13 +116,13 @@ public class Step2Activity extends ActionBarActivity {
 
 	
 	private void setHeaderStepImages() {
-		ImageView imageStep1 = (ImageView) findViewById(R.id.imageStep1);
-		ImageView imageStep2 = (ImageView) findViewById(R.id.imageStep2);
-		ImageView imageStep3 = (ImageView) findViewById(R.id.imageStep3);
-		
-		imageStep1.setImageResource(R.drawable.step1);
-		imageStep2.setImageResource(R.drawable.step2_pressed);
-		imageStep3.setImageResource(R.drawable.step3);
+		TextView textStep1 = (TextView) findViewById(R.id.textStep1);
+		TextView textStep2 = (TextView) findViewById(R.id.textStep2);
+		TextView textStep3 = (TextView) findViewById(R.id.textStep3);
+
+		textStep1.setBackgroundResource(R.drawable.dr_step_disabled);
+		textStep2.setBackgroundResource(R.drawable.dr_step);
+		textStep3.setBackgroundResource(R.drawable.dr_step_disabled);
 	}
 	
 	public void showEditDialog(View view) {

@@ -28,12 +28,14 @@
         </activity>
         <activity
             android:name="si.halcom.bankpayments.Step2Activity"
-            android:theme="@style/CustomActionBarTheme"
+            android:icon="@drawable/logo"
+        	android:theme="@style/CustomActionBarTheme"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="si.halcom.bankpayments.Step3Activity"
-            android:theme="@style/CustomActionBarTheme"
+            android:icon="@drawable/logo"
+        	android:theme="@style/CustomActionBarTheme"
             android:windowSoftInputMode="stateHidden" >
         </activity>
 

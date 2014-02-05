@@ -6,7 +6,8 @@
     android:orientation="vertical" >
 
     <ScrollView
-        android:layout_width="fill_parent"
+        android:id="@+id/scroll_page"
+	    android:layout_width="fill_parent"
         android:layout_height="fill_parent" >    
         
         <LinearLayout
@@ -30,7 +31,8 @@
 		        android:id="@+id/radioGroup1"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
-		        android:orientation="horizontal" >
+		        android:orientation="horizontal"
+		        style="@style/RadioGroup"  >
 		
 		        <RadioButton
 		            android:id="@+id/radio_new_payment"
@@ -39,6 +41,11 @@
 		        	style="@style/RadioButton"
 	                android:text="@string/new_payment" />
 		
+		        <LinearLayout
+			        android:layout_width="0dip"
+					android:layout_height="0dip"
+					android:layout_weight="1" />
+		        
 		        <RadioButton
 	                android:id="@+id/radio_from_template"
 	                android:layout_width="wrap_content"
@@ -105,8 +112,9 @@
 		        android:id="@+id/spinner_pay_to_account"
 		        android:layout_width="match_parent"
         		android:layout_height="wrap_content"
-        		style="@style/Spinner"
-		        android:entries="@array/pay_to_account" />
+        		style="@style/Spinner_disabled"
+		        android:entries="@array/pay_to_account"
+		        android:clickable="false" />
 	        
 		    	        
 	        <TextView
@@ -157,7 +165,7 @@
 		            android:id="@+id/execution_date"
 		            android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					style="@style/ContentSectionLabel"
+					style="@style/ContentText"
 		            android:text="@string/execution_date"
 			        android:layout_weight="1" />
 	        
@@ -204,7 +212,7 @@
 			    <ImageView
 			        android:id="@+id/optional_data_arrow"
 			        android:layout_height="wrap_content"
-					style="@style/HeaderStepImages"
+					style="@style/OptionalDataImage"
 			        android:src="@drawable/arrow_down" />
 	        </LinearLayout>
 	        

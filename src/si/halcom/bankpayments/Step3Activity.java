@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class Step3Activity extends ActionBarActivity {
@@ -37,13 +38,13 @@ public class Step3Activity extends ActionBarActivity {
 
 	
 	private void setHeaderStepImages() {
-		ImageView imageStep1 = (ImageView) findViewById(R.id.imageStep1);
-		ImageView imageStep2 = (ImageView) findViewById(R.id.imageStep2);
-		ImageView imageStep3 = (ImageView) findViewById(R.id.imageStep3);
-		
-		imageStep1.setImageResource(R.drawable.step1);
-		imageStep2.setImageResource(R.drawable.step2);
-		imageStep3.setImageResource(R.drawable.step3_pressed);
+		TextView textStep1 = (TextView) findViewById(R.id.textStep1);
+		TextView textStep2 = (TextView) findViewById(R.id.textStep2);
+		TextView textStep3 = (TextView) findViewById(R.id.textStep3);
+
+		textStep1.setBackgroundResource(R.drawable.dr_step_disabled);
+		textStep2.setBackgroundResource(R.drawable.dr_step_disabled);
+		textStep3.setBackgroundResource(R.drawable.dr_step);
 	}
 	
 
