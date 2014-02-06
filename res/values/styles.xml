@@ -2,8 +2,8 @@
     
     <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat.Light">
         <item name="actionBarStyle">@style/MyActionBar</item>
-    	<item name="homeAsUpIndicator">@drawable/up_indicator</item>
-    </style>
+    	<item name="homeAsUpIndicator">@drawable/new_indicator</item>
+   	</style>
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="background">@color/background_header</item>
@@ -228,4 +228,35 @@
 	   <item name="android:padding">10dp</item>
 	</style>   
    
+	
+   <style name="row">
+       <item name="android:layout_height">50.0dip</item>
+   </style>	
+
+   <style name="row_header">
+       <item name="android:layout_height">20.0dip</item>
+   </style>	
+   
+   <style name="row_icon">
+       <item name="android:padding">10.0dip</item>
+       <item name="android:layout_height">50.0dip</item>
+       <item name="android:layout_width">50.0dip</item>
+   </style>
+
+   <style name="row_text">
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:padding">10.0dip</item>
+       <item name="android:layout_width">50.0dip</item>
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/content_title</item>
+   </style>
+   
+   <style name="row_header_text">
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:padding">10.0dip</item>
+       <item name="android:layout_width">50.0dip</item>
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/content_label_data</item>
+   </style>   
+
 </resources>
