@@ -82,8 +82,8 @@
    </style>
    
    <style name="HeaderMessageImage">
-       <item name="android:layout_width">50dp</item>
-       <item name="android:layout_height">50dp</item>
+       <item name="android:layout_marginLeft">20dp</item>
+       <item name="android:layout_marginRight">20dp</item>
    </style>
 
    
@@ -148,6 +148,17 @@
        <item name="android:gravity">top</item>
    </style>
    
+   <style name="MessageLabelData">
+       <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/message_label_text</item>
+       <item name="android:layout_gravity">center</item>
+       <item name="android:gravity">left|center_horizontal</item>
+       </style>
+ 
+   <style name="MessageSendLabelData" parent="@style/MessageLabelData">
+       <item name="android:textColor">@color/message_send_label_text</item>
+   </style>   
+   
    <style name="RadioGroup">
        <item name="android:paddingTop">8.0dip</item>
    </style>
@@ -158,6 +169,12 @@
        <item name="android:button">@drawable/radio_button</item>
    </style>
         
+   <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+	   <item name="android:textSize">16.0sp</item>
+       <item name="android:textColor">@color/content_text</item>
+       <item name="android:button">@drawable/check_box</item>
+       <item name="android:layout_marginTop">8.0dip</item>
+   </style>
         
    <style name="BorderHorizontal">
        <item name="android:background">@color/background_border</item>

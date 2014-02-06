@@ -12,6 +12,7 @@
     <string name="system_data">SYSTEM DATA</string>
     <string name="new_payment">New payment</string>
     <string name="from_template">From template</string>
+    <string name="state">STATE</string>
     <string name="button_next">NEXT</string>
     <string name="button_edit">EDIT</string>
     <string name="button_pay">PAY</string>
@@ -40,6 +41,7 @@
     <string name="optional_data_payer_name">ULTIMATE PAYER NAME:</string>
     <string name="optional_data_debtor_reference">DEBTOR REFERENCE:</string>
     <string name="optional_data_creditor_reference">CREDITOR REFERENCE:</string>
+    <string name="optional_data_urgent">URGENT PAYMENT</string>
     <string name="optional_data_urgent_payment">URGENT PAYMENT:</string>
     <string name="system_data_payment_status">PAYMENT STATUS:</string>
     <string name="system_data_payment_id">PAYMENT ID:</string>

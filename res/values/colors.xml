@@ -32,6 +32,8 @@
     <color name="content_label_error">#dc1e18</color>
     <color name="content_label_disabled">#8f99a1</color>
     <color name="content_text">#465866</color>
+    <color name="message_label_text">#003876</color>
+    <color name="message_send_label_text">#007f00</color>
     <color name="spinner_border">#cccccc</color>
     <color name="spinner_border_error">#dc1e18</color>
     <color name="spinner_border_disabled">#cccccc</color>

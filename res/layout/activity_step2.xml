@@ -22,14 +22,16 @@
 		        
 		        <ImageView
 			        android:id="@+id/image_header_message"
-			        style="@style/HeaderMessageImage"
+			        android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		style="@style/HeaderMessageImage"
 		        	android:src="@drawable/message" />
 		        
 		        <TextView
 		            android:id="@+id/header_message"
 		            android:layout_width="wrap_content"
 	        		android:layout_height="wrap_content"
-	        		style="@style/ContentSectionLabelData"
+	        		style="@style/MessageLabelData"
 		            android:text="Lrem ipsum lorem ipsum lorem ipsum" />
 			</LinearLayout>        
             

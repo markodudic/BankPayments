@@ -4,7 +4,7 @@
     	android:id="@+id/dr_border"/>
     <item>
     	<bitmap 
-    		android:src="@drawable/arrow_spinner" 
+    		android:src="@drawable/arrow_spinner_disabled" 
     		android:gravity="right|center" 
     		android:layout_marginRight="8dip"
     		android:padding="8dip"/>

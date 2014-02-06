@@ -15,7 +15,6 @@
         android:theme="@style/Theme.AppCompat.Light" >
         <activity
             android:name="si.halcom.bankpayments.Step1Activity"
-            android:label="@string/header_title"
             android:icon="@drawable/logo"
         	android:theme="@style/SmallActionBarTheme"
         	style="@style/HeaderTitle"
