@@ -4,7 +4,7 @@
     <item
         android:left="0dp"
         android:right="0dp">
-        <bitmap android:src="@drawable/indicator" />
+        <bitmap android:src="@drawable/indicator_up" />
     </item>
 
 </layer-list>

@@ -41,5 +41,7 @@
     <color name="list_background_pressed">#465866</color>
     <color name="list_item_title">#000</color>
     <color name="list_divider">#000</color>
+    <color name="menu_selected">#ebf7f7</color>
+    <color name="menu_unselected">#fff</color>
 </resources>
 

@@ -17,7 +17,7 @@
             android:name="si.halcom.bankpayments.Step1Activity"
             android:label="@string/header_title"
             android:icon="@drawable/logo"
-        	android:theme="@style/CustomActionBarTheme"
+        	android:theme="@style/SmallActionBarTheme"
         	style="@style/HeaderTitle"
             android:windowSoftInputMode="stateHidden" >
             <intent-filter>
@@ -29,13 +29,13 @@
         <activity
             android:name="si.halcom.bankpayments.Step2Activity"
             android:icon="@drawable/logo"
-        	android:theme="@style/CustomActionBarTheme"
+        	android:theme="@style/UpActionBarTheme"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="si.halcom.bankpayments.Step3Activity"
             android:icon="@drawable/logo"
-        	android:theme="@style/CustomActionBarTheme"
+        	android:theme="@style/BigActionBarTheme"
             android:windowSoftInputMode="stateHidden" >
         </activity>
 

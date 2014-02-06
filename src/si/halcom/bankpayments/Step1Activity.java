@@ -47,7 +47,7 @@ public class Step1Activity extends ActionBarActivity {
 		
 		ActionBar actionBar = getSupportActionBar();
 	    actionBar.setDisplayShowCustomEnabled(true);
-	    //actionBar.setDisplayHomeAsUpEnabled(true);
+	    actionBar.setDisplayHomeAsUpEnabled(true);
 	    
 		LayoutInflater inflator = getLayoutInflater();
 		View v = inflator.inflate(R.layout.action_bar_icons, null);
@@ -56,7 +56,7 @@ public class Step1Activity extends ActionBarActivity {
 		actionBar.setCustomView(v, lp);
 		
 		
-		addListenerOnSpinnerItemSelection();
+		addSpinners();
 		
 		setCurrentDateOnView();
 		
@@ -72,10 +72,16 @@ public class Step1Activity extends ActionBarActivity {
         //menu.setMenu(R.layout.menu);
 		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
 		menu.setMenu(R.layout.menu_frame);
+		menu.setSlidingEnabled(true);
+		
 		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
 		mFrag = new SampleListFragment();
 		t.replace(R.id.menu_frame, mFrag);
 		t.commit();
+		
+		
+
+		
 		
 		tvDisplayDate = (TextView) findViewById(R.id.payment_date);
 		tvDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -148,7 +154,7 @@ public class Step1Activity extends ActionBarActivity {
 
 	
 	
-	public void addListenerOnSpinnerItemSelection(){
+	public void addSpinners(){
 	    Spinner spinner = (Spinner) findViewById(R.id.spinner_payment_types);
 	    ArrayAdapter<CharSequence> mAdapter = ArrayAdapter.createFromResource(this, R.array.payment_types, R.layout.spinner_item);
 	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);

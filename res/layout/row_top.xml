@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/row_layout"
     android:layout_width="match_parent"
-    style="@style/row_header"
+    style="@style/row_top"
     android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/row_title"
-        style="@style/row_header_text"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
-
+    <Spinner
+        android:id="@+id/spinner_menu_usernames"
+        android:layout_width="200dip"
+      	android:layout_height="match_parent"
+      	android:entries="@array/menu_usernames" />
+    
 </LinearLayout>

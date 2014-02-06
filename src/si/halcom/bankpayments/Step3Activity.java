@@ -25,6 +25,8 @@ public class Step3Activity extends ActionBarActivity {
 
 		ActionBar actionBar = getSupportActionBar();
 	    actionBar.setDisplayShowCustomEnabled(true);
+	    actionBar.setDisplayHomeAsUpEnabled(true);
+	    actionBar.setDisplayShowHomeEnabled(false);
 	    
 		LayoutInflater inflator = getLayoutInflater();
 		View v = inflator.inflate(R.layout.action_bar_icons, null);

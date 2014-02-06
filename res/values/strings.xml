@@ -71,30 +71,91 @@
         <item>USD</item>
     </string-array> 
     
+    
+    <string-array name="menu_usernames">
+        <item>Jon Doe</item>
+        <item>Janez Novak</item>
+        <item>Long User Name</item>
+    </string-array>
+    
     <string-array name="menu_items">
+        <item >Last Login: 04.02.2014 12:12:12</item>
+        <item >Status</item>
         <item >Start page</item>
         <item >Accounts</item>
         <item >Loans</item>
         <item >Deposits</item>
         <item >Cards</item>
+        <item >Payments</item>
+        <item >New payments</item>
+        <item >Templates</item>
+        <item >Photo pay</item>
+        <item >Sent payments</item>
+        <item >Contacts</item>
+        <item >GEO locator</item>
+        <item >Contact information</item>
+        <item >Other</item>
+        <item >Our products</item>
+        <item >Loan calculator</item>
+        <item >Foreign exchange</item>
+        <item >Currency converter</item>
+        <item >Settings</item>
+        <item >Language</item>
+        <item >Change password</item>  
     </string-array>
      
     <!-- Keep them in order as the titles are in -->
     <array name="menu_icons">
-        <item>@drawable/ic_home</item>
-        <item>@drawable/ic_people</item>
-        <item>@drawable/ic_photos</item>
-        <item>@drawable/ic_communities</item>
-        <item>@drawable/ic_pages</item>
+        <item>@drawable/ic_last_login</item>
+        <item>@null</item>
+        <item>@drawable/ic_start_page</item>
+        <item>@drawable/ic_accounts</item>
+        <item>@drawable/ic_loans</item>
+        <item>@drawable/ic_deposites</item>
+        <item>@drawable/ic_cards</item>
+        <item>@null</item>
+        <item>@drawable/ic_new_payments</item>
+        <item>@drawable/ic_templates</item>
+        <item>@drawable/ic_photo_pay</item>
+        <item>@drawable/ic_sent_payments</item>
+        <item>@null</item>
+        <item>@drawable/ic_geo_locator</item>
+        <item>@drawable/ic_contact_information</item>
+        <item>@null</item>
+        <item>@drawable/ic_our_products</item>
+        <item>@drawable/ic_loan_calculation</item>
+        <item>@drawable/ic_foreign_exchange</item>
+        <item>@drawable/ic_currency_converter</item>
+        <item>@null</item>
+        <item>@drawable/ic_language</item>
+        <item>@drawable/ic_change_password</item>
     </array>
 
     <string-array name="menu_type">
-        <item >HEADER</item>
-        <item >ITEM</item>
         <item >ITEM</item>
         <item >HEADER</item>
         <item >ITEM</item>
-    </string-array>
+        <item >ITEM</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+    	<item >HEADER</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+    	<item >HEADER</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+    	<item >HEADER</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+        <item >ITEM</item>
+    	<item >HEADER</item>
+    	<item >ITEM</item>
+        <item >ITEM</item>
+   </string-array>
 
 
 </resources>
