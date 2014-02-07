@@ -182,6 +182,18 @@
        <item name="android:layout_height">2.0dip</item>
    </style>
 
+   <style name="MenuBorderHorizontal">
+       <item name="android:background">@color/background_menu_border</item>
+       <item name="android:layout_weight">0.0</item>
+       <item name="android:layout_height">1.0dip</item>
+   </style>
+   
+   <style name="MenuBorderVertical">
+       <item name="android:background">@color/background_menu_border</item>
+       <item name="android:layout_weight">0.0</item>
+       <item name="android:layout_width">1.0dip</item>
+   </style>
+   
    <style name="Spinner">
        <item name="android:background">@drawable/dr_spinner</item>
        <item name="android:layout_marginTop">8.0dip</item>
@@ -300,5 +312,21 @@
        <item name="android:textColor">@color/content_label_data</item>
    </style>   
     
+   <style name="menu_layout">
+       <item name="android:gravity">center</item>
+       <item name="android:layout_gravity">left|top</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">fill_parent</item>
+   </style> 
    
+   <style name="menu_button">
+       <item name="android:gravity">center</item>
+       <item name="android:padding">4.0dip</item>
+       <item name="android:layout_height">50dp</item>
+       <item name="android:layout_width">125dp</item>
+       <item name="android:textSize">14.0sp</item>
+       <item name="android:textColor">@color/message_label_text</item>
+       <item name="android:background">@null</item>
+    </style>  
+      
 </resources>

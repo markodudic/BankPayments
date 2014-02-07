@@ -134,7 +134,7 @@ public class Step1Activity extends ActionBarActivity {
 
 	// display current date
 	public void setCurrentDateOnView() {
- 
+  
 		tvDisplayDate = (TextView) findViewById(R.id.payment_date);
  
 		final Calendar c = Calendar.getInstance();

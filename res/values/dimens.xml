@@ -6,4 +6,7 @@
 
     <dimen name="slidingmenu_offset">60dp</dimen>
     <dimen name="list_padding">0dp</dimen>
+    
+    <dimen name="menu_border_size">3dp</dimen>
+    <dimen name="menu_border_overlay_size">-6dp</dimen>
 </resources>

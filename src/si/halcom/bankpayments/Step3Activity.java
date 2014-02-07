@@ -1,5 +1,6 @@
 package si.halcom.bankpayments;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,12 +10,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class Step3Activity extends ActionBarActivity {
 
+	private Button menuButton1;
+	private Button menuButton2;
+	private Button menuButton3;
+	private Button menuButton4;
 
 	
 	@Override
@@ -36,6 +41,31 @@ public class Step3Activity extends ActionBarActivity {
 
 		setHeaderStepImages();
 		
+		menuButton1 = (Button) findViewById(R.id.menu_button_1);
+		menuButton2 = (Button) findViewById(R.id.menu_button_2);
+		menuButton3 = (Button) findViewById(R.id.menu_button_3);
+		menuButton4 = (Button) findViewById(R.id.menu_button_4);
+		menuButton1.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+		    	setButtonCliecked(menuButton1);
+		    }
+		});		
+		menuButton2.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+		    	setButtonCliecked(menuButton2);
+		    }
+		});		
+		menuButton3.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+		    	setButtonCliecked(menuButton3);
+		    }
+		});		
+		menuButton4.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+		    	setButtonCliecked(menuButton4);
+		    }
+		});		
+		
 	}
 
 	
@@ -49,5 +79,11 @@ public class Step3Activity extends ActionBarActivity {
 		textStep3.setBackgroundResource(R.drawable.dr_step);
 	}
 	
-
+	public void setButtonCliecked(Button menuButton){
+		menuButton1.setBackgroundResource(0);
+		menuButton2.setBackgroundResource(0);
+		menuButton3.setBackgroundResource(0);
+		menuButton4.setBackgroundResource(0);
+		menuButton.setBackgroundResource(R.drawable.menu_button_clicked);
+	}
 }

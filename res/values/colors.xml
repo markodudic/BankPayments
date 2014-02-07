@@ -22,6 +22,7 @@
     <color name="background_app">#fff</color>
     <color name="background_header">#00aeef</color>
     <color name="background_border">#00aeef</color>
+    <color name="background_menu_border">#cccccc</color>
     <color name="background_button">#1296db</color>
     <color name="background_section">#e9f6fc</color>
     <color name="step_disabled">#99dff9</color>
