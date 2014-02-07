@@ -182,6 +182,11 @@
        <item name="android:layout_height">2.0dip</item>
    </style>
 
+   <style name="BorderHorizontal_margin" parent="@style/BorderHorizontal">
+       <item name="android:layout_marginBottom">10.0dip</item>
+   </style>
+   
+      
    <style name="MenuBorderHorizontal">
        <item name="android:background">@color/background_menu_border</item>
        <item name="android:layout_weight">0.0</item>
@@ -192,6 +197,23 @@
        <item name="android:background">@color/background_menu_border</item>
        <item name="android:layout_weight">0.0</item>
        <item name="android:layout_width">1.0dip</item>
+   </style>
+   
+   <style name="ListButton">
+       <item name="android:background">@drawable/dr_spinner</item>
+       <item name="android:layout_marginTop">8.0dip</item>
+       <item name="android:textSize">18.0sp</item>
+       <item name="android:textColor">@color/content_label</item>
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:padding">8dp</item>
+   </style>
+
+   <style name="ListButton_error" parent="@style/ListButton">
+       <item name="android:background">@drawable/dr_spinner_error</item>
+   </style>
+   
+   <style name="ListButton_disabled" parent="@style/ListButton">
+       <item name="android:background">@drawable/dr_spinner_disabled</item>
    </style>
    
    <style name="Spinner">
@@ -295,6 +317,13 @@
        <item name="android:textSize">14.0sp</item>
        <item name="android:textColor">@color/content_title</item>
    </style>
+   
+   <style name="row_list_text">
+       <item name="android:gravity">center_vertical</item>
+       <item name="android:padding">10.0dip</item>
+       <item name="android:textSize">18.0sp</item>
+   </style>
+   
    
    <style name="row_header_text">
        <item name="android:gravity">center_vertical</item>

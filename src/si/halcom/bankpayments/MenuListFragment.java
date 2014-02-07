@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class SampleListFragment extends ListFragment {
+public class MenuListFragment extends ListFragment {
 
 	private String[] menuTitles;
 	private TypedArray menuIcons;

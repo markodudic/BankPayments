@@ -46,5 +46,6 @@
     <color name="list_divider">#000</color>
     <color name="menu_selected">#ebf7f7</color>
     <color name="menu_unselected">#fff</color>
+    <color name="list_selected">#66cdf4</color>
 </resources>
 

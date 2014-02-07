@@ -4,6 +4,7 @@ import java.util.Calendar;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -16,13 +17,13 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -39,6 +40,12 @@ public class Step1Activity extends ActionBarActivity {
 
 	private boolean isOptionalData = false;
 	
+	private Button bPaymentTypes;
+	private Button bPayTo;
+	private Button bPayFrom;
+	private Button bPayToAccount;
+	private Button bPaymentCurrency;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +64,7 @@ public class Step1Activity extends ActionBarActivity {
 		actionBar.setCustomView(v, lp);
 		
 		
-		addSpinners();
+		//addSpinners();
 		
 		setCurrentDateOnView();
 		
@@ -76,13 +83,65 @@ public class Step1Activity extends ActionBarActivity {
 		menu.setSlidingEnabled(true);
 		
 		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
-		mFrag = new SampleListFragment();
+		mFrag = new MenuListFragment();
 		t.replace(R.id.menu_frame, mFrag);
 		t.commit();
 		
 		
-
+		bPaymentTypes = (Button) findViewById(R.id.button_payment_types);
+		bPaymentTypes.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Bundle bundle=new Bundle();
+				bundle.putInt("arrayId", R.array.payment_types);
+				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
+		    }
+		});		
 		
+		bPayTo = (Button) findViewById(R.id.button_pay_to);
+		bPayTo.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Bundle bundle=new Bundle();
+				bundle.putInt("arrayId", R.array.pay_to);
+				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
+		    }
+		});	
+		
+		bPayFrom = (Button) findViewById(R.id.button_pay_from);
+		bPayFrom.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Bundle bundle=new Bundle();
+				bundle.putInt("arrayId", R.array.pay_from);
+				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
+		    }
+		});	
+		
+		bPayToAccount = (Button) findViewById(R.id.button_pay_to_account);
+		bPayToAccount.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Bundle bundle=new Bundle();
+				bundle.putInt("arrayId", R.array.pay_to_account);
+				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
+		    }
+		});	
+		
+		bPaymentCurrency = (Button) findViewById(R.id.button_payment_currency);
+		bPaymentCurrency.setOnClickListener(new View.OnClickListener() {
+		    public void onClick(View v) {
+				Bundle bundle=new Bundle();
+				bundle.putInt("arrayId", R.array.payment_currency);
+				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
+		    }
+		});			
 		
 		tvDisplayDate = (TextView) findViewById(R.id.payment_date);
 		tvDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +181,10 @@ public class Step1Activity extends ActionBarActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		/*Intent intent = getIntent();
+		String value = intent.getStringExtra("value");
+		bPaymentTypes.setText(value);
+		*/
 		ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page);
 		scrollPage.fullScroll(View.FOCUS_UP);
 	}
@@ -153,7 +216,7 @@ public class Step1Activity extends ActionBarActivity {
 	}
 
 
-	
+	/*
 	
 	public void addSpinners(){
 	    Spinner spinner = (Spinner) findViewById(R.id.spinner_payment_types);
@@ -180,7 +243,7 @@ public class Step1Activity extends ActionBarActivity {
 	    mAdapter = ArrayAdapter.createFromResource(this, R.array.payment_currency, R.layout.spinner_item);
 	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 	    spinner.setAdapter(mAdapter);	    
-	} 	
+	} 	*/
 	
 	@Override
 	protected Dialog onCreateDialog(int id) {

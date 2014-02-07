@@ -7,6 +7,7 @@
     <string name="payment_type">PAYMENT TYPE</string>
     <string name="pay_from">PAY FROM</string>
     <string name="pay_to">PAY TO</string>
+    <string name="pay_to_account">PAY TO ACCOUNT</string>
     <string name="payment_data">PAYMENT DATA</string>
     <string name="optional_data">OPTIONAL DATA</string>
     <string name="system_data">SYSTEM DATA</string>
@@ -22,6 +23,7 @@
    	<string name="button_cancel">CANCEL</string>
    	<string name="debit_account">DEBIT ACCOUNT</string>
     <string name="payment_amount">PAYMENT AMOUNT*</string>
+    <string name="payment_currency">EUR</string>
     <string name="execution_date">EXECUTION DATE*</string>
     <string name="payment_date">15/02/2014</string>
     <string name="payment_details">PAYMENT DETAILS*</string>
@@ -53,26 +55,31 @@
     <string name="menu_button_4_text">GET RECIEPT</string>
         
     <string-array name="payment_types">
+        <item>PAYMENT TYPE</item>
         <item>Standard payment</item>
         <item>Universal payment</item>
     </string-array>    
     
     <string-array name="pay_from">
+        <item>PAY FROM</item>
         <item>Single extended (JPY)\n1234567890123455</item>
         <item>Europe (EUR)\n1234567890123455</item>
     </string-array>  
     
     <string-array name="pay_to">
+        <item>PAY TO</item>
         <item>CREDITOR NAME*</item>
         <item>Lorem Ipsum</item>
     </string-array>      
 
     <string-array name="pay_to_account">
+        <item>PAY TO ACCOUNT</item>
         <item>CREDIT ACCOUNT*</item>
         <item>1234567890123455</item>
     </string-array>  
     
     <string-array name="payment_currency">
+        <item>CURRENCY</item>
         <item>EUR</item>
         <item>USD</item>
     </string-array> 

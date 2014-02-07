@@ -37,7 +37,12 @@
         	android:theme="@style/BigActionBarTheme"
             android:windowSoftInputMode="stateHidden" >
         </activity>
-
+        <activity
+            android:name="si.halcom.bankpayments.ListActivity"
+            android:icon="@drawable/logo"
+        	android:theme="@style/BigActionBarTheme" >
+        </activity>
+        
     </application>
 
 </manifest>

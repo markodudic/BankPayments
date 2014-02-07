@@ -54,17 +54,23 @@
 	                android:text="@string/from_template" />
 		
 		    </RadioGroup>
-	    
-	
-		    <Spinner
+
+		    <!-- Spinner
 		        android:id="@+id/spinner_payment_types"
 		        android:layout_width="match_parent"
         		android:layout_height="wrap_content"
         		style="@style/Spinner"
         		android:prompt="@string/payment_type"
-		        android:entries="@array/payment_types" />
+		        android:entries="@array/payment_types" /-->
 	
-	        <TextView
+		    <Button
+		        android:id="@+id/button_payment_types"
+		        android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ListButton"
+        		android:text="@string/payment_type" />
+
+		    <TextView
 	            android:id="@+id/pay_from"
 	            android:layout_width="fill_parent"
         		android:layout_height="wrap_content"
@@ -83,13 +89,19 @@
         		style="@style/ContentSectionLabel"
 	            android:text="@string/debit_account" />
 	        
-		    <Spinner
+		    <!-- Spinner
 		        android:id="@+id/spinner_pay_from"
 		        android:layout_width="match_parent"
         		android:layout_height="wrap_content"
         		style="@style/Spinner"
-		        android:entries="@array/pay_from" />
+		        android:entries="@array/pay_from" /-->
 	        
+		    <Button
+		        android:id="@+id/button_pay_from"
+		        android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ListButton"
+        		android:text="@string/pay_from" />
 		    
 	        <TextView
 	            android:id="@+id/pay_to"
@@ -102,21 +114,34 @@
 	            android:layout_width="fill_parent"
 		        style="@style/BorderHorizontal" />
 	
-		    <Spinner
+		    <!-- Spinner
 		        android:id="@+id/spinner_pay_to"
 		        android:layout_width="match_parent"
         		android:layout_height="wrap_content"
         		style="@style/Spinner_error"
-		        android:entries="@array/pay_to" />
+		        android:entries="@array/pay_to" /-->
 	        
-		    <Spinner
+		    <Button
+		        android:id="@+id/button_pay_to"
+		        android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ListButton_error"
+        		android:text="@string/pay_to" />
+
+		    <!-- Spinner
 		        android:id="@+id/spinner_pay_to_account"
 		        android:layout_width="match_parent"
         		android:layout_height="wrap_content"
         		style="@style/Spinner_disabled"
 		        android:entries="@array/pay_to_account"
-		        android:clickable="false" />
+		        android:clickable="false" /-->
 	        
+		    <Button
+		        android:id="@+id/button_pay_to_account"
+		        android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		style="@style/ListButton_disabled"
+        		android:text="@string/pay_to_account" />
 		    	        
 	        <TextView
 	            android:id="@+id/payment_data"
@@ -148,12 +173,20 @@
 					android:layout_height="0dip"
 					android:layout_weight="1" />
 	            
-		        <Spinner
+		        <!-- Spinner
 			        android:id="@+id/spinner_payment_currency"
 			        android:layout_width="wrap_content"
         			android:layout_height="wrap_content"
         			style="@style/Spinner"
 			        android:entries="@array/payment_currency"
+			        android:layout_weight="1" /-->
+			        
+			    <Button
+			        android:id="@+id/button_payment_currency"
+			        android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ListButton"
+        			android:text="@string/payment_currency"
 			        android:layout_weight="1" />
 	        </LinearLayout>	
 		        
