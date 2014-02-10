@@ -28,13 +28,7 @@ public class ListActivity extends ActionBarActivity {
 	    actionBar.setDisplayShowCustomEnabled(true);
 	    actionBar.setDisplayHomeAsUpEnabled(true);
 	    actionBar.setTitle(R.string.header_title);
-	    
-		/*LayoutInflater inflator = getLayoutInflater();
-		View v = inflator.inflate(R.layout.action_bar_icons, null);
-		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL);
 
-		actionBar.setCustomView(v, lp);
-		 */
 		
 		Intent intent = getIntent();
 		int arrayId = intent.getIntExtra("arrayId", 0);

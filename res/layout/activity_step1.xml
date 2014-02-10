@@ -66,7 +66,6 @@
 		    <Button
 		        android:id="@+id/button_payment_types"
 		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
         		style="@style/ListButton"
         		android:text="@string/payment_type" />
 
@@ -99,7 +98,6 @@
 		    <Button
 		        android:id="@+id/button_pay_from"
 		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
         		style="@style/ListButton"
         		android:text="@string/pay_from" />
 		    
@@ -124,7 +122,6 @@
 		    <Button
 		        android:id="@+id/button_pay_to"
 		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
         		style="@style/ListButton_error"
         		android:text="@string/pay_to" />
 
@@ -139,9 +136,9 @@
 		    <Button
 		        android:id="@+id/button_pay_to_account"
 		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
         		style="@style/ListButton_disabled"
-        		android:text="@string/pay_to_account" />
+        		android:text="@string/pay_to_account"
+		        android:clickable="false" />
 		    	        
 	        <TextView
 	            android:id="@+id/payment_data"
@@ -163,7 +160,6 @@
 				    android:id="@+id/payment_amount"
 				    android:hint="@string/payment_amount"
 				    android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
 					style="@style/ContentText"
 			        android:inputType="number"
 			        android:layout_weight="1" />	        
@@ -184,7 +180,6 @@
 			    <Button
 			        android:id="@+id/button_payment_currency"
 			        android:layout_width="wrap_content"
-	        		android:layout_height="wrap_content"
 	        		style="@style/ListButton"
         			android:text="@string/payment_currency"
 			        android:layout_weight="1" />
@@ -212,7 +207,6 @@
 				    android:id="@+id/payment_date"
 				    android:text="@string/payment_date"
 				    android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
 					style="@style/ContentText"
 				    android:onClick="showTimePickerDialog"
 			        android:layout_weight="1" />	        
@@ -265,7 +259,6 @@
 				    android:id="@+id/optional_data_1"
 				    android:hint="@string/optional_data_1"
 				    android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
 					style="@style/ContentText"
 			        android:inputType="text" />	        
 			    		    
@@ -273,7 +266,6 @@
 				    android:id="@+id/optional_data_2"
 				    android:hint="@string/optional_data_2"
 				    android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
 					style="@style/ContentText"
 			        android:inputType="text" />	        
 	
@@ -281,7 +273,6 @@
 				    android:id="@+id/optional_data_3"
 				    android:hint="@string/optional_data_3"
 				    android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
 					style="@style/ContentText"
 			        android:inputType="text" />	  
 			        

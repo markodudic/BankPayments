@@ -48,7 +48,7 @@
 			    android:id="@+id/menu_button_4"
 			    style="@style/menu_button"
 			    android:text="@string/menu_button_4_text"
-			    android:drawableLeft="@drawable/get_receipt" />   
+			    android:drawableLeft="@drawable/save_as_template" />   
            
             
         </LinearLayout>    

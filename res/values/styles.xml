@@ -44,7 +44,8 @@
 		<item name="android:textSize">18.0sp</item>
     	<item name="android:textColor">@color/title_text</item>
 	</style>    
-    
+
+
 	
     <style name="SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
         <item name="android:textSize">18.0sp</item>
@@ -170,6 +171,7 @@
    </style>  
 
    <style name="ContentText">
+       <item name="android:layout_height">45dip</item>
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_text</item>
        <item name="android:textColorHint">@color/content_text</item>
@@ -178,6 +180,7 @@
        <item name="android:padding">8dp</item>
    </style>  
    
+      
    <style name="ContentTextArea" parent="@style/ContentText">
        <item name="android:layout_height">120dip</item>
        <item name="android:gravity">top</item>
@@ -234,13 +237,11 @@
        <item name="android:layout_width">1.0dip</item>
    </style>
    
-   <style name="ListButton">
+   
+   <style name="ListButton" parent="@style/ContentText">
        <item name="android:background">@drawable/dr_spinner</item>
-       <item name="android:layout_marginTop">8.0dip</item>
-       <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_label</item>
        <item name="android:gravity">center_vertical</item>
-       <item name="android:padding">8dp</item>
    </style>
 
    <style name="ListButton_error" parent="@style/ListButton">
@@ -333,11 +334,11 @@
    
    	
    <style name="row">
-       <item name="android:layout_height">50.0dip</item>
+       <item name="android:background">@color/background_app</item>
    </style>	
 
    <style name="row_header">
-       <item name="android:layout_height">30.0dip</item>
+       <item name="android:background">@color/background_app</item>
    </style>	
    
    <style name="row_icon">
@@ -385,7 +386,7 @@
    </style> 
    
    <style name="menu_button">
-       <item name="android:gravity">center</item>
+       <item name="android:gravity">left|center_vertical</item>
        <item name="android:padding">4.0dip</item>
        <item name="android:layout_height">50dip</item>
        <item name="android:layout_width">150dip</item>

@@ -92,6 +92,7 @@
     </string-array>
     
     <string-array name="menu_items">
+        <item ></item>
         <item >Last Login: 04.02.2014 12:12:12</item>
         <item >Status</item>
         <item >Start page</item>
@@ -119,6 +120,7 @@
      
     <!-- Keep them in order as the titles are in -->
     <array name="menu_icons">
+        <item></item>
         <item>@drawable/last_login</item>
         <item>@null</item>
         <item>@drawable/start_page</item>
@@ -145,6 +147,7 @@
     </array>
 
     <string-array name="menu_type">
+        <item ></item>
         <item >ITEM</item>
         <item >HEADER</item>
         <item >ITEM</item>

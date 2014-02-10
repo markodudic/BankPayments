@@ -28,7 +28,7 @@ import android.widget.TextView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
-
+ 
 public class Step1Activity extends ActionBarActivity {
 
     private TextView tvDisplayDate;
@@ -46,7 +46,8 @@ public class Step1Activity extends ActionBarActivity {
 	private Button bPayFrom;
 	private Button bPayToAccount;
 	private Button bPaymentCurrency;
-
+ 
+	private SlidingMenu slidingMenu;
  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,18 +71,18 @@ public class Step1Activity extends ActionBarActivity {
 		setCurrentDateOnView();
 		
 		
-		SlidingMenu menu = new SlidingMenu(this);
-        menu.setMode(SlidingMenu.LEFT);
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		slidingMenu = new SlidingMenu(this);
+		slidingMenu.setMode(SlidingMenu.LEFT);
+		slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         //menu.setShadowWidthRes(R.dimen.shadow_width);
         //menu.setShadowDrawable(R.drawable.shadow);
         //menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         //menu.setFadeDegree(0.35f);
-        menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW );
+		slidingMenu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW );
         //menu.setMenu(R.layout.menu);
-		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-		menu.setMenu(R.layout.menu_frame);
-		menu.setSlidingEnabled(true);
+		slidingMenu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		slidingMenu.setMenu(R.layout.menu_frame);
+		slidingMenu.setSlidingEnabled(true);
 		
 		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
 		mFrag = new MenuListFragment();
@@ -110,7 +111,7 @@ public class Step1Activity extends ActionBarActivity {
 				startActivity(intent);
 		    }
 		});	
-		
+		 
 		bPayFrom = (Button) findViewById(R.id.button_pay_from);
 		bPayFrom.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
@@ -120,9 +121,9 @@ public class Step1Activity extends ActionBarActivity {
 				intent.putExtras(bundle);
 				startActivity(intent);
 		    }
-		});	
+		});
 		
-		bPayToAccount = (Button) findViewById(R.id.button_pay_to_account);
+		/*bPayToAccount = (Button) findViewById(R.id.button_pay_to_account);
 		bPayToAccount.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
 				Bundle bundle=new Bundle();
@@ -131,7 +132,7 @@ public class Step1Activity extends ActionBarActivity {
 				intent.putExtras(bundle);
 				startActivity(intent);
 		    }
-		});	
+		});	*/
 		
 		bPaymentCurrency = (Button) findViewById(R.id.button_payment_currency);
 		bPaymentCurrency.setOnClickListener(new View.OnClickListener() {
@@ -178,7 +179,6 @@ public class Step1Activity extends ActionBarActivity {
 	
 	}
 
-	
 	
 	@Override
 	protected void onResume() {
@@ -289,4 +289,16 @@ public class Step1Activity extends ActionBarActivity {
 	}
 	
 	
+	@Override
+	public Intent getSupportParentActivityIntent() {
+		slidingMenuToggle();
+		return null;
+	}	
+	
+	
+
+	public void slidingMenuToggle() {
+		slidingMenu.toggle();
+    }
+		
 }
