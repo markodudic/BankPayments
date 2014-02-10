@@ -18,21 +18,25 @@
 -->
 
 <resources>
-    <color name="transparent_color">#00000000</color>
     <color name="background_app">#fff</color>
-    <color name="background_header">#00aeef</color>
     <color name="background_border">#00aeef</color>
-    <color name="background_menu_border">#cccccc</color>
     <color name="background_button">#1296db</color>
+    <color name="background_header">#00aeef</color>
+    <color name="background_menu_border">#cccccc</color>
     <color name="background_section">#e9f6fc</color>
-    <color name="step_disabled">#99dff9</color>
-    <color name="title_text">#fff</color>
-    <color name="content_title">#00acec</color>
     <color name="content_label">#465866</color>
     <color name="content_label_data">#333333</color>
     <color name="content_label_error">#dc1e18</color>
     <color name="content_label_disabled">#8f99a1</color>
+    <color name="content_title">#00acec</color>
     <color name="content_text">#465866</color>
+    <color name="list_background">#fff</color>
+    <color name="list_background_pressed">#465866</color>
+    <color name="list_divider">#000</color>
+    <color name="list_item_title">#000</color>
+    <color name="list_selected">#66cdf4</color>
+    <color name="menu_selected">#ebf7f7</color>
+    <color name="menu_unselected">#fff</color>
     <color name="message_label_text">#003876</color>
     <color name="message_send_label_text">#007f00</color>
     <color name="spinner_border">#cccccc</color>
@@ -40,12 +44,8 @@
     <color name="spinner_border_disabled">#cccccc</color>
     <color name="spinner_dropdown">#fff</color>
     <color name="spinner_dropdown_text">#465866</color>
-    <color name="list_background">#fff</color>
-    <color name="list_background_pressed">#465866</color>
-    <color name="list_item_title">#000</color>
-    <color name="list_divider">#000</color>
-    <color name="menu_selected">#ebf7f7</color>
-    <color name="menu_unselected">#fff</color>
-    <color name="list_selected">#66cdf4</color>
+    <color name="step_disabled">#99dff9</color>
+    <color name="title_text">#fff</color>
+    <color name="transparent_color">#00000000</color>
 </resources>
 

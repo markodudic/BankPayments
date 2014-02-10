@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/row_layout"
     android:layout_width="match_parent"
-    style="@style/row"
+    style="@style/Row"
     android:orientation="horizontal" >
 
     <ImageView
         android:id="@+id/row_icon"
-        style="@style/row_icon" />
+        style="@style/Row_icon" />
 
     <TextView
         android:id="@+id/row_title"
-        style="@style/row_text"
+        style="@style/Row_text"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />

@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/row_layout"
     android:layout_width="match_parent"
-    style="@style/row_top"
+    style="@style/Row_top"
     android:orientation="horizontal" >
 
     <Spinner
         android:id="@+id/spinner_menu_usernames"
-        style="@style/menu_usernames"
+        style="@style/Menu_usernames"
         android:entries="@array/menu_usernames" />
     
 	<LinearLayout 
@@ -17,7 +17,7 @@
 	    android:gravity="right|center_vertical" >
 	    
 	    <ImageButton
-		    style="@style/logout"
+		    style="@style/Logout"
     		android:background="@drawable/logout" />
 	</LinearLayout>
 </LinearLayout>

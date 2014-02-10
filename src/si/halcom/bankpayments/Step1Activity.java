@@ -218,34 +218,6 @@ public class Step1Activity extends ActionBarActivity {
 	}
 
 
-	/*
-	
-	public void addSpinners(){
-	    Spinner spinner = (Spinner) findViewById(R.id.spinner_payment_types);
-	    ArrayAdapter<CharSequence> mAdapter = ArrayAdapter.createFromResource(this, R.array.payment_types, R.layout.spinner_item);
-	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-	    spinner.setAdapter(mAdapter);
-
-	    spinner = (Spinner) findViewById(R.id.spinner_pay_from);
-	    mAdapter = ArrayAdapter.createFromResource(this, R.array.pay_from, R.layout.spinner_item);
-	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-	    spinner.setAdapter(mAdapter);
-
-	    spinner = (Spinner) findViewById(R.id.spinner_pay_to_account);
-	    mAdapter = ArrayAdapter.createFromResource(this, R.array.pay_to_account, R.layout.spinner_item_disabled);
-	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-	    spinner.setAdapter(mAdapter);
-	    
-	    spinner = (Spinner) findViewById(R.id.spinner_pay_to);
-	    mAdapter = ArrayAdapter.createFromResource(this, R.array.pay_to, R.layout.spinner_item_error);
-	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-	    spinner.setAdapter(mAdapter);
-	    
-	    spinner = (Spinner) findViewById(R.id.spinner_payment_currency);
-	    mAdapter = ArrayAdapter.createFromResource(this, R.array.payment_currency, R.layout.spinner_item);
-	    mAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-	    spinner.setAdapter(mAdapter);	    
-	} 	*/
 	
 	@Override
 	protected Dialog onCreateDialog(int id) {

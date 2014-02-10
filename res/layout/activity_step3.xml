@@ -11,12 +11,12 @@
         android:scrollbars="none" >
     
         <LinearLayout
-            style="@style/menu_layout"
+            style="@style/Menu_layout"
             android:orientation="horizontal" >
         
            <Button
                android:id="@+id/menu_button_1"
-               style="@style/menu_button"
+               style="@style/Menu_button"
                android:drawableLeft="@drawable/new_payment"
                android:text="@string/menu_button_1_text" />
 
@@ -26,7 +26,7 @@
            
            <Button
 			    android:id="@+id/menu_button_2"
-			    style="@style/menu_button"
+			    style="@style/Menu_button"
 			    android:text="@string/menu_button_2_text"
 			    android:drawableLeft="@drawable/save_as_trustie" />   
            
@@ -36,7 +36,7 @@
            
            <Button
 			    android:id="@+id/menu_button_3"
-			    style="@style/menu_button"
+			    style="@style/Menu_button"
 			    android:text="@string/menu_button_3_text"
 			    android:drawableLeft="@drawable/save_as_template" />   
            
@@ -46,7 +46,7 @@
            
            <Button
 			    android:id="@+id/menu_button_4"
-			    style="@style/menu_button"
+			    style="@style/Menu_button"
 			    android:text="@string/menu_button_4_text"
 			    android:drawableLeft="@drawable/save_as_template" />   
            
