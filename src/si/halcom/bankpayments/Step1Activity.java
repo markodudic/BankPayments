@@ -4,19 +4,20 @@ import java.util.Calendar;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
@@ -46,7 +47,7 @@ public class Step1Activity extends ActionBarActivity {
 	private Button bPayToAccount;
 	private Button bPaymentCurrency;
 
-	
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -56,7 +57,7 @@ public class Step1Activity extends ActionBarActivity {
 	    actionBar.setDisplayShowCustomEnabled(true);
 	    actionBar.setDisplayHomeAsUpEnabled(true);
 	    actionBar.setTitle(R.string.header_title);
-	    
+	     
 		LayoutInflater inflator = getLayoutInflater();
 		View v = inflator.inflate(R.layout.action_bar_icons, null);
 		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL);
@@ -174,6 +175,7 @@ public class Step1Activity extends ActionBarActivity {
 		
 
 		setHeaderStepImages();
+	
 	}
 
 	

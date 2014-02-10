@@ -75,9 +75,7 @@
 		        
 		        <ImageView
 			        android:id="@+id/image_header_message"
-			        android:layout_width="wrap_content"
-	        		android:layout_height="wrap_content"
-	        		style="@style/HeaderMessageImage"
+			        style="@style/HeaderMessageImage"
 		        	android:src="@drawable/message_ok" />
 		        
 		        <TextView
@@ -433,32 +431,6 @@
 	            </LinearLayout>           
 	            
 	            
-	            <LinearLayout
-			        android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:orientation="horizontal"
-					style="@style/ContentSectionLayout" >
-						
-				    <Button
-				        android:id="@+id/button_edit"
-				        android:layout_width="wrap_content"
-				        style="@style/ButtonNext"
-				        android:text="@string/button_edit"
-				        android:onClick="showEditDialog"
-						android:layout_weight="1" />
-	
-			    	<LinearLayout
-				        android:layout_width="10dip"
-						android:layout_height="0dip" />
-				    			    					
-				    <Button
-				        android:id="@+id/button_pay"
-				        android:layout_width="wrap_content"
-				        style="@style/ButtonNext"
-				        android:text="@string/button_pay"
-				        android:onClick="showPayDialog"
-						android:layout_weight="1" />
-	            </LinearLayout>
 	        </LinearLayout>
 	    </LinearLayout>
 	    

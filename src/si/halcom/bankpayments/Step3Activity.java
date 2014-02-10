@@ -2,6 +2,7 @@ package si.halcom.bankpayments;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -11,6 +12,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -20,6 +23,7 @@ public class Step3Activity extends ActionBarActivity {
 	private Button menuButton2;
 	private Button menuButton3;
 	private Button menuButton4;
+	private boolean isSystemData = false;
 
 	
 	@Override
@@ -64,7 +68,26 @@ public class Step3Activity extends ActionBarActivity {
 		    public void onClick(View v) {
 		    	setButtonCliecked(menuButton4);
 		    }
-		});		
+		});	
+		
+		final LinearLayout lSystemData = (LinearLayout) findViewById(R.id.system_data_layout);
+		ImageView ivSystemData = (ImageView) findViewById(R.id.optional_data_arrow);
+		ivSystemData.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (isSystemData) {
+					lSystemData.setVisibility(LinearLayout.GONE);
+					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+					ivOptionalData.setImageResource(R.drawable.arrow_down);
+					isSystemData = false;
+				} else {
+					lSystemData.setVisibility(LinearLayout.VISIBLE);
+					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+					ivOptionalData.setImageResource(R.drawable.arrow_up);
+					isSystemData = true;
+				}
+			}
+		});			
 		
 	}
 
