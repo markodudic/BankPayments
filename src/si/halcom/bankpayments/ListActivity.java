@@ -1,19 +1,17 @@
 package si.halcom.bankpayments;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.Menu;
-import android.view.View;
 
 
-public class ListActivity extends ActionBarActivity {
+public class ListActivity extends ActionBarActivity implements ListListFragment.OnDataPass {
 
 	protected ListFragment lFrag;
 
@@ -59,4 +57,11 @@ public class ListActivity extends ActionBarActivity {
     }
 
 	
+	@Override
+	public void onDataPass(String data) {
+	    Intent resultIntent = new Intent();
+	    resultIntent.putExtra(Step1Activity.RESULT_SELECTION_IDENT, data);
+	    setResult(Activity.RESULT_OK, resultIntent);
+	    finish();
+	}
 }

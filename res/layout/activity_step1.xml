@@ -39,7 +39,9 @@
 	                android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	style="@style/RadioButton"
-	                android:text="@string/new_payment" />
+	                android:text="@string/new_payment"
+	                android:checked="true"
+	                android:focusableInTouchMode="true" />
 		
 		        <LinearLayout
 			        android:layout_width="0dip"
@@ -220,13 +222,14 @@
 		        android:inputType="text" />	        
 	        
 	        <LinearLayout
-		        android:layout_width="fill_parent"
+		        android:id="@+id/optional_data"
+			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
 				style="@style/ContentSectionLayout" >
 	
 	            <TextView
-		            android:id="@+id/optional_data"
+		            android:id="@+id/optional_data_title"
 		            android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					style="@style/ContentSectionTitle_Small"
@@ -255,23 +258,41 @@
 				android:orientation="vertical"
 				android:visibility="gone" >
 			    
+		        <TextView
+		            android:id="@+id/optional_payer_name"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_payer_name" />
+	        
 		        <EditText
 				    android:id="@+id/optional_data_1"
-				    android:hint="@string/optional_data_1"
 				    android:layout_width="fill_parent"
 					style="@style/ContentText"
 			        android:inputType="text" />	        
-			    		    
+		        
+		        <TextView
+		            android:id="@+id/optional_debtor_reference"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_debtor_reference" />
+		        			    		    
 	            <EditText
 				    android:id="@+id/optional_data_2"
-				    android:hint="@string/optional_data_2"
 				    android:layout_width="fill_parent"
 					style="@style/ContentText"
 			        android:inputType="text" />	        
 	
+	            <TextView
+		            android:id="@+id/optional_creditor_reference"
+		            android:layout_width="fill_parent"
+	        		android:layout_height="wrap_content"
+	        		style="@style/ContentSectionLabel"
+		            android:text="@string/optional_creditor_reference" />
+	            
 	            <EditText
 				    android:id="@+id/optional_data_3"
-				    android:hint="@string/optional_data_3"
 				    android:layout_width="fill_parent"
 					style="@style/ContentText"
 			        android:inputType="text" />	  

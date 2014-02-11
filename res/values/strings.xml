@@ -23,11 +23,14 @@
     <string name="menu_button_3_text">SAVE AS TEMPLATE</string>
     <string name="menu_button_4_text">GET RECIEPT</string>
     <string name="optional_data">OPTIONAL DATA</string>
-    <string name="optional_data_1">Mike knight</string>
+    <!-- string name="optional_data_1">Mike knight</string>
     <string name="optional_data_2">12345678</string>
-   	<string name="optional_data_3">Lorem ipsum</string>
-   	<string name="optional_data_payer_name">ULTIMATE PAYER NAME:</string>
+   	<string name="optional_data_3">Lorem ipsum</string-->
+   	<string name="optional_payer_name">PAYER NAME</string>
+   	<string name="optional_data_payer_name">PAYER NAME:</string>
+    <string name="optional_debtor_reference">DEBTOR REFERENCE</string>
     <string name="optional_data_debtor_reference">DEBTOR REFERENCE:</string>
+    <string name="optional_creditor_reference">CREDITOR REFERENCE</string>
     <string name="optional_data_creditor_reference">CREDITOR REFERENCE:</string>
     <string name="optional_data_urgent">URGENT PAYMENT</string>
     <string name="optional_data_urgent_payment">URGENT PAYMENT:</string>
@@ -37,7 +40,7 @@
     <string name="pay_to">PAY TO</string>
     <string name="pay_to_account">PAY TO ACCOUNT</string>
     <string name="pay_to_name">CREDITOR NAME</string>
-   	<string name="pay_to_account">CREDIT ACCOUNT</string>
+   	<string name="credit_account">CREDIT ACCOUNT</string>
     <string name="payment_data">PAYMENT DATA</string>
     <string name="payment_data_amount">PAYMENT AMOUNT:</string>
     <string name="payment_data_date">EXECUTION DATE:</string>
@@ -127,10 +130,10 @@
         <item>@drawable/start_page</item>
         <item>@drawable/accounts</item>
         <item>@drawable/loans</item>
-        <item>@drawable/deposites</item>
+        <item>@drawable/deposits</item>
         <item>@drawable/cards</item>
         <item>@null</item>
-        <item>@drawable/new_payment</item>
+        <item>@drawable/new_payment_menu</item>
         <item>@drawable/templates</item>
         <item>@drawable/photo_pay</item>
         <item>@drawable/sent_payments</item>
@@ -139,8 +142,8 @@
         <item>@drawable/contact_information</item>
         <item>@null</item>
         <item>@drawable/our_products</item>
-        <item>@drawable/loan_calculation</item>
-        <item>@drawable/foreign_exchange</item>
+        <item>@drawable/loan_calculator</item>
+        <item>@drawable/foreing_exchange</item>
         <item>@drawable/currency_converter</item>
         <item>@null</item>
         <item>@drawable/language</item>

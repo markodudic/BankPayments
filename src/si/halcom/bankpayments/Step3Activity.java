@@ -72,7 +72,7 @@ public class Step3Activity extends ActionBarActivity {
 		});	
 		
 		final LinearLayout lSystemData = (LinearLayout) findViewById(R.id.system_data_layout);
-		ImageView ivSystemData = (ImageView) findViewById(R.id.optional_data_arrow);
+		LinearLayout ivSystemData = (LinearLayout) findViewById(R.id.system_data);
 		ivSystemData.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

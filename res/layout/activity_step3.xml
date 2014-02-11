@@ -116,7 +116,7 @@
 			            android:id="@+id/debit_account_data"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="Executed" />
 				</LinearLayout>        
 	            
@@ -143,7 +143,7 @@
 			            android:id="@+id/debit_account"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/debit_account" />
 			        
 			        <TextView
@@ -179,7 +179,7 @@
 			            android:id="@+id/pay_to_name"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/pay_to_name" />
 			        
 			        <TextView
@@ -193,7 +193,7 @@
 			            android:id="@+id/pay_to_account"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/pay_to_account" />
 			        
 			        <TextView
@@ -228,7 +228,7 @@
 			            android:id="@+id/payment_data_amount"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/payment_data_amount" />
 			        
 			        <TextView
@@ -242,7 +242,7 @@
 			            android:id="@+id/payment_data_details"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/payment_data_details" />
 			        
 			        <TextView
@@ -277,7 +277,7 @@
 			            android:id="@+id/optional_data_payer_name"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/optional_data_payer_name" />
 			        
 			        <TextView
@@ -291,7 +291,7 @@
 			            android:id="@+id/optional_data_debtor_reference"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/optional_data_debtor_reference" />
 			        
 			        		        		        
@@ -306,7 +306,7 @@
 			            android:id="@+id/optional_data_creditor_reference"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/optional_data_creditor_reference" />
 			        
 			        <TextView
@@ -320,7 +320,7 @@
 			            android:id="@+id/optional_data_urgent_payment"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/optional_data_urgent_payment" />
 			        
 			        <TextView
@@ -334,13 +334,14 @@
 		        
 		        
 		        <LinearLayout
-			        android:layout_width="fill_parent"
+			        android:id="@+id/system_data"
+				    android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
 					android:orientation="horizontal"
 					style="@style/ContentSectionLayout" >
 		
 		            <TextView
-			            android:id="@+id/system_data"
+			            android:id="@+id/system_data_title"
 			            android:layout_height="wrap_content"
 						android:layout_width="wrap_content"
 						style="@style/ContentSectionTitle_Small"
@@ -375,7 +376,7 @@
 			            android:id="@+id/system_data_payment_status"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/system_data_payment_status" />
 			        
 			        <TextView
@@ -389,7 +390,7 @@
 			            android:id="@+id/system_data_payment_id"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/system_data_payment_id" />
 			        
 			        		        		        
@@ -404,7 +405,7 @@
 			            android:id="@+id/system_data_last_modified_by"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/system_data_last_modified_by" />
 			        
 			        <TextView
@@ -418,7 +419,7 @@
 			            android:id="@+id/system_data_last_modified"
 			            android:layout_width="fill_parent"
 		        		android:layout_height="wrap_content"
-		        		style="@style/ContentSectionLabel"
+		        		style="@style/ContentSectionLabel_light"
 			            android:text="@string/system_data_last_modified" />
 			        
 			        <TextView

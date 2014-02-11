@@ -1,16 +1,16 @@
 package si.halcom.bankpayments;
 
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ListListFragment extends ListFragment {
@@ -19,6 +19,7 @@ public class ListListFragment extends ListFragment {
 	
 	private int arrayId;
 
+	OnDataPass dataPasser;
     
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		arrayId=getArguments().getInt("arrayId");
@@ -46,7 +47,19 @@ public class ListListFragment extends ListFragment {
 		}
 	}
 
-
+	public interface OnDataPass {
+	    public void onDataPass(String data);
+	}
+	
+	@Override
+	public void onAttach(Activity a) {
+	    super.onAttach(a);
+	    dataPasser = (OnDataPass) a;
+	}
+	
+	public void passData(String data) {
+	    dataPasser.onDataPass(data);
+	}
 	
 	public class SampleAdapter extends ArrayAdapter<SampleItem> {
 
@@ -77,11 +90,8 @@ public class ListListFragment extends ListFragment {
 		            @Override
 		            public void onClick(View v) {
 		            	v.setBackgroundColor(getResources().getColor(R.color.list_selected));
-		            	//Bundle bundle=new Bundle();
-						//bundle.putString("value", ((TextView) v).getText().toString());
-						Intent intent = new Intent(getActivity().getBaseContext(), Step1Activity.class);
-						//intent.putExtras(bundle);
-		        		startActivity(intent);
+		            	TextView tv = (TextView)((LinearLayout) v).getChildAt(0);
+		            	passData(tv.getText().toString());
 		            }
 		        });
 			}

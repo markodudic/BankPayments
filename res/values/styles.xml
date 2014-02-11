@@ -83,8 +83,9 @@
    <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
 	   <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_text</item>
-       <item name="android:button">@drawable/check_box</item>
+       <item name="android:button">@drawable/checkbox</item>
        <item name="android:layout_marginTop">8.0dip</item>
+       <item name="android:paddingLeft">10dp</item>
    </style>
         
    <style name="Content">
@@ -107,7 +108,7 @@
    <style name="ContentSectionTitle">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_title</item>
-       <item name="android:layout_marginTop">8dip</item>
+       <item name="android:layout_marginTop">12dip</item>
    </style>   
 
    <style name="ContentSectionTitle_Small" parent="@style/ContentSectionTitle">
@@ -118,12 +119,14 @@
        <item name="android:layout_marginTop">16dip</item>
    </style> 
       
-   <style name="ContentSectionLabel">
-       <item name="android:textSize">18.0sp</item>
+   <style name="ContentSectionLabel" parent="@style/ContentSectionTitle">
        <item name="android:textColor">@color/content_label</item>
-       <item name="android:layout_marginTop">8.0dip</item>
    </style>  
 
+   <style name="ContentSectionLabel_light" parent="@style/ContentSectionLabel">
+       <item name="android:textColor">@color/content_label_light</item>
+   </style>
+   
    <style name="ContentSectionLabelData">
        <item name="android:textSize">16.0sp</item>
        <item name="android:textColor">@color/content_label_data</item>
@@ -136,7 +139,7 @@
        <item name="android:textColor">@color/content_text</item>
        <item name="android:textColorHint">@color/content_text</item>
        <item name="android:background">@drawable/dr_border</item>
-       <item name="android:layout_marginTop">8.0dip</item>
+       <item name="android:layout_marginTop">12.0dip</item>
        <item name="android:padding">8dp</item>
    </style>  
    
@@ -243,6 +246,7 @@
    </style>       
 
    <style name="ListButton" parent="@style/ContentText">
+       <item name="android:layout_height">wrap_content</item>
        <item name="android:background">@drawable/dr_spinner</item>
        <item name="android:textColor">@color/content_label</item>
        <item name="android:gravity">center_vertical</item>
@@ -285,12 +289,13 @@
    
    <style name="Menu_button">
        <item name="android:gravity">left|center_vertical</item>
-       <item name="android:padding">4.0dip</item>
+       <item name="android:paddingLeft">10.0dip</item>
        <item name="android:layout_height">50dip</item>
        <item name="android:layout_width">150dip</item>
        <item name="android:textSize">14.0sp</item>
        <item name="android:textColor">@color/message_label_text</item>
        <item name="android:background">@null</item>
+       <item name="android:drawablePadding">10dp</item>
     </style>  
     
     <style name="Menu_usernames">
@@ -323,6 +328,7 @@
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_label</item>
        <item name="android:button">@drawable/radio_button</item>
+       <item name="android:paddingLeft">10dp</item>
    </style>
         
    <style name="Row">

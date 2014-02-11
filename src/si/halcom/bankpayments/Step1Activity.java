@@ -2,10 +2,10 @@ package si.halcom.bankpayments;
 
 import java.util.Calendar;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
@@ -13,7 +13,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,7 +22,6 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -48,7 +46,14 @@ public class Step1Activity extends ActionBarActivity {
 	private Button bPaymentCurrency;
  
 	private SlidingMenu slidingMenu;
- 
+	
+	public static int RESULT_PAYMENT_TYPE 		= 1;
+	public static int RESULT_PAY_TO 			= 2;
+	public static int RESULT_PAY_FROM			= 3;
+	public static int RESULT_PAY_TO_ACCOUNT 	= 4;
+	public static int RESULT_PAYMENT_CURRENCY 	= 5;
+	public static String RESULT_SELECTION_IDENT = "selection";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -93,55 +98,60 @@ public class Step1Activity extends ActionBarActivity {
 		bPaymentTypes = (Button) findViewById(R.id.button_payment_types);
 		bPaymentTypes.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
+		    	bPaymentTypes.setFocusableInTouchMode(true);
 				Bundle bundle=new Bundle();
 				bundle.putInt("arrayId", R.array.payment_types);
 				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
 				intent.putExtras(bundle);
-				startActivity(intent);
+				startActivityForResult(intent, RESULT_PAYMENT_TYPE);
 		    }
 		});		
 		
 		bPayTo = (Button) findViewById(R.id.button_pay_to);
 		bPayTo.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
+		    	bPayTo.setFocusableInTouchMode(true);
 				Bundle bundle=new Bundle();
 				bundle.putInt("arrayId", R.array.pay_to);
 				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
 				intent.putExtras(bundle);
-				startActivity(intent);
+				startActivityForResult(intent, RESULT_PAY_TO);
 		    }
 		});	
 		 
 		bPayFrom = (Button) findViewById(R.id.button_pay_from);
 		bPayFrom.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
+		    	bPayFrom.setFocusableInTouchMode(true);
 				Bundle bundle=new Bundle();
 				bundle.putInt("arrayId", R.array.pay_from);
 				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
 				intent.putExtras(bundle);
-				startActivity(intent);
+				startActivityForResult(intent, RESULT_PAY_FROM);
 		    }
 		});
 		
 		/*bPayToAccount = (Button) findViewById(R.id.button_pay_to_account);
 		bPayToAccount.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
+		    	bPayToAccount.setFocusableInTouchMode(true);
 				Bundle bundle=new Bundle();
 				bundle.putInt("arrayId", R.array.pay_to_account);
 				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
 				intent.putExtras(bundle);
-				startActivity(intent);
+				startActivityForResult(intent, RESULT_PAY_TO_ACCOUNT);
 		    }
 		});	*/
 		
 		bPaymentCurrency = (Button) findViewById(R.id.button_payment_currency);
 		bPaymentCurrency.setOnClickListener(new View.OnClickListener() {
 		    public void onClick(View v) {
+		    	bPaymentCurrency.setFocusableInTouchMode(true);
 				Bundle bundle=new Bundle();
 				bundle.putInt("arrayId", R.array.payment_currency);
 				Intent intent = new Intent(Step1Activity.this, ListActivity.class);
 				intent.putExtras(bundle);
-				startActivity(intent);
+				startActivityForResult(intent, RESULT_PAYMENT_CURRENCY);
 		    }
 		});			
 		
@@ -156,7 +166,7 @@ public class Step1Activity extends ActionBarActivity {
 
 		
 		final LinearLayout lOptionalData = (LinearLayout) findViewById(R.id.optional_data_layout);
-		ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
+		LinearLayout ivOptionalData = (LinearLayout) findViewById(R.id.optional_data);
 		ivOptionalData.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -176,6 +186,10 @@ public class Step1Activity extends ActionBarActivity {
 		
 
 		setHeaderStepImages();
+		
+		ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page);
+		scrollPage.fullScroll(View.FOCUS_UP);
+		
 	
 	}
 
@@ -187,8 +201,8 @@ public class Step1Activity extends ActionBarActivity {
 		String value = intent.getStringExtra("value");
 		bPaymentTypes.setText(value);
 		*/
-		ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page);
-		scrollPage.fullScroll(View.FOCUS_UP);
+		//ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page);
+		//scrollPage.fullScroll(View.FOCUS_UP);
 	}
 	
 	@Override
@@ -272,5 +286,39 @@ public class Step1Activity extends ActionBarActivity {
 	public void slidingMenuToggle() {
 		slidingMenu.toggle();
     }
+
 		
+	@Override 
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {     
+	  super.onActivityResult(requestCode, resultCode, data); 
+	  if (requestCode == RESULT_PAYMENT_TYPE) {
+	      if (resultCode == Activity.RESULT_OK) { 
+	    	  String result = data.getStringExtra(RESULT_SELECTION_IDENT);
+	    	  bPaymentTypes.setText(result);
+	      } 
+	  } else if (requestCode == RESULT_PAY_TO) {
+	      if (resultCode == Activity.RESULT_OK) { 
+	    	  String result = data.getStringExtra(RESULT_SELECTION_IDENT);
+	    	  bPayTo.setText(result);
+	      } 
+	  } else if (requestCode == RESULT_PAY_FROM) {
+	      if (resultCode == Activity.RESULT_OK) { 
+	    	  String result = data.getStringExtra(RESULT_SELECTION_IDENT);
+	    	  bPayFrom.setText(result);
+	      } 
+	  } else if (requestCode == RESULT_PAY_TO_ACCOUNT) {
+	      if (resultCode == Activity.RESULT_OK) { 
+	    	  String result = data.getStringExtra(RESULT_SELECTION_IDENT);
+	    	  bPayToAccount.setText(result);
+	      } 
+	  } else if (requestCode == RESULT_PAYMENT_CURRENCY) {
+	      if (resultCode == Activity.RESULT_OK) { 
+	    	  String result = data.getStringExtra(RESULT_SELECTION_IDENT);
+	    	  bPaymentCurrency.setText(result);
+	      } 
+	  }
+	}
+
+ 
+
 }

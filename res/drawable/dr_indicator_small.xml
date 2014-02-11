@@ -3,7 +3,7 @@
 
     <item
         android:left="0dp"
-        android:right="10dp">
+        android:right="0dp">
         <bitmap android:src="@drawable/indicator_small" />
     </item>
 
