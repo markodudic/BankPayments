@@ -179,6 +179,14 @@ public class Step1Activity extends ActionBarActivity {
 					lOptionalData.setVisibility(LinearLayout.VISIBLE);
 					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
 					ivOptionalData.setImageResource(R.drawable.arrow_up);
+					final ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page_step1);
+					//scrollPage.fullScroll(View.FOCUS_DOWN);
+					scrollPage.post(new Runnable() {
+				        @Override
+				        public void run() {
+				        	scrollPage.fullScroll(ScrollView.FOCUS_DOWN);
+				        }
+				    });
 					isOptionalData = true;
 				}
 			}
@@ -187,7 +195,7 @@ public class Step1Activity extends ActionBarActivity {
 
 		setHeaderStepImages();
 		
-		ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page);
+		ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page_step1);
 		scrollPage.fullScroll(View.FOCUS_UP);
 		
 	

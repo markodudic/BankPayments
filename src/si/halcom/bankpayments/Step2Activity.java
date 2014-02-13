@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -107,6 +108,14 @@ public class Step2Activity extends ActionBarActivity {
 					lSystemData.setVisibility(LinearLayout.VISIBLE);
 					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
 					ivOptionalData.setImageResource(R.drawable.arrow_up);
+					final ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page_step2);
+					//scrollPage.fullScroll(View.FOCUS_DOWN);
+					scrollPage.post(new Runnable() {
+				        @Override
+				        public void run() {
+				        	scrollPage.fullScroll(ScrollView.FOCUS_DOWN);
+				        }
+				    });
 					isSystemData = true;
 				}
 			}

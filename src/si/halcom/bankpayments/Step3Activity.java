@@ -1,19 +1,20 @@
 package si.halcom.bankpayments;
 
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.graphics.drawable.ColorDrawable;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.ActionBarActivity;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -75,8 +76,8 @@ public class Step3Activity extends ActionBarActivity {
 		LinearLayout ivSystemData = (LinearLayout) findViewById(R.id.system_data);
 		ivSystemData.setOnClickListener(new View.OnClickListener() {
 			@Override
-			public void onClick(View v) {
-				if (isSystemData) {
+			public void onClick(View v) { 
+				if (isSystemData) { 
 					lSystemData.setVisibility(LinearLayout.GONE);
 					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
 					ivOptionalData.setImageResource(R.drawable.arrow_down);
@@ -85,6 +86,13 @@ public class Step3Activity extends ActionBarActivity {
 					lSystemData.setVisibility(LinearLayout.VISIBLE);
 					ImageView ivOptionalData = (ImageView) findViewById(R.id.optional_data_arrow);
 					ivOptionalData.setImageResource(R.drawable.arrow_up);
+					final ScrollView scrollPage = (ScrollView) findViewById(R.id.scroll_page_step3);
+					scrollPage.post(new Runnable() {
+				        @Override
+				        public void run() {
+				        	scrollPage.fullScroll(ScrollView.FOCUS_DOWN);
+				        }
+				    });
 					isSystemData = true;
 				}
 			}
@@ -108,6 +116,13 @@ public class Step3Activity extends ActionBarActivity {
 		menuButton2.setBackgroundResource(0);
 		menuButton3.setBackgroundResource(0);
 		menuButton4.setBackgroundResource(0);
-		menuButton.setBackgroundResource(R.drawable.menu_button_clicked);
+		setViewBackground(menuButton, R.drawable.menu_button_clicked);
+	}
+	
+	public static void setViewBackground(final View v, final int backgroundResId) {
+	    final int paddingBottom = v.getPaddingBottom(), paddingLeft = v.getPaddingLeft();
+	    final int paddingRight = v.getPaddingRight(), paddingTop = v.getPaddingTop();
+	    v.setBackgroundResource(backgroundResId);
+	    v.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 	}
 }
