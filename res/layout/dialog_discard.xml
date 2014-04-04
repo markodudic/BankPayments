@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     style="@style/DialogContent" >
@@ -8,20 +8,16 @@
 	<TextView
         android:id="@+id/text"
         style="@style/DialogTitle"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:text="@string/discard_title" />
     
 	
 	<TextView
         android:id="@+id/text"
         style="@style/DialogText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:text="@string/discard_payment" />
      
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal" >
 			

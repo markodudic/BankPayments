@@ -1,44 +1,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/background_app"
     android:orientation="vertical" >
 
     <ScrollView
         android:id="@+id/scroll_page_step1"
-	    android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >    
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent" >    
         
         <LinearLayout
 	        style="@style/Content"
-	        android:layout_width="fill_parent"
+	        android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:orientation="vertical" >
 
 	        <TextView
 	            android:id="@+id/payment_type"
-	            android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/ContentSectionTitle"
+	            style="@style/ContentSectionTitle"
 	            android:text="@string/payment_type" />
 	
 	        <View 
-	            android:layout_width="fill_parent"
-		        style="@style/BorderHorizontal" />
+	            style="@style/BorderHorizontal" />
 	
 		    <RadioGroup
 		        android:id="@+id/radioGroup1"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:orientation="horizontal"
 		        style="@style/RadioGroup"  >
 		
 		        <RadioButton
 		            android:id="@+id/radio_new_payment"
-	                android:layout_width="wrap_content"
-		        	android:layout_height="wrap_content"
-		        	style="@style/RadioButton"
+	                style="@style/RadioButton"
 	                android:text="@string/new_payment"
 	                android:checked="true"
 	                android:focusableInTouchMode="true" />
@@ -50,119 +42,72 @@
 		        
 		        <RadioButton
 	                android:id="@+id/radio_from_template"
-	                android:layout_width="wrap_content"
-		        	android:layout_height="wrap_content"
-		        	style="@style/RadioButton"
+	                style="@style/RadioButton"
 	                android:text="@string/from_template" />
 		
 		    </RadioGroup>
-
-		    <!-- Spinner
-		        android:id="@+id/spinner_payment_types"
-		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/Spinner"
-        		android:prompt="@string/payment_type"
-		        android:entries="@array/payment_types" /-->
 	
 		    <Button
 		        android:id="@+id/button_payment_types"
-		        android:layout_width="match_parent"
-        		style="@style/ListButton"
+		        style="@style/ListButton"
         		android:text="@string/payment_type" />
 
 		    <TextView
 	            android:id="@+id/pay_from"
-	            android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/ContentSectionTitle"
+	            style="@style/ContentSectionTitle"
 	            android:text="@string/pay_from" />
 	
 	        <View 
-	            android:layout_width="fill_parent"
-		        style="@style/BorderHorizontal" />
+	            style="@style/BorderHorizontal" />
 	
 	        
 	        <TextView
 	            android:id="@+id/debit_account"
-	            android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/ContentSectionLabel"
+	            style="@style/ContentSectionLabel"
 	            android:text="@string/debit_account" />
-	        
-		    <!-- Spinner
-		        android:id="@+id/spinner_pay_from"
-		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/Spinner"
-		        android:entries="@array/pay_from" /-->
 	        
 		    <Button
 		        android:id="@+id/button_pay_from"
-		        android:layout_width="match_parent"
-        		style="@style/ListButton"
+		        style="@style/ListButton"
         		android:text="@string/pay_from" />
 		    
 	        <TextView
 	            android:id="@+id/pay_to"
-	            android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/ContentSectionTitle"
+	            style="@style/ContentSectionTitle"
 	            android:text="@string/pay_to" />
 	
 	        <View 
-	            android:layout_width="fill_parent"
-		        style="@style/BorderHorizontal" />
-	
-		    <!-- Spinner
-		        android:id="@+id/spinner_pay_to"
-		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/Spinner_error"
-		        android:entries="@array/pay_to" /-->
-	        
+	            style="@style/BorderHorizontal" />
+
 		    <Button
 		        android:id="@+id/button_pay_to"
-		        android:layout_width="match_parent"
-        		style="@style/ListButton_error"
+		        style="@style/ListButton_error"
         		android:text="@string/pay_to" />
 
-		    <!-- Spinner
-		        android:id="@+id/spinner_pay_to_account"
-		        android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/Spinner_disabled"
-		        android:entries="@array/pay_to_account"
-		        android:clickable="false" /-->
 	        
 		    <Button
 		        android:id="@+id/button_pay_to_account"
-		        android:layout_width="match_parent"
-        		style="@style/ListButton_disabled"
+		        style="@style/ListButton_disabled"
         		android:text="@string/pay_to_account"
 		        android:clickable="false" />
 		    	        
 	        <TextView
 	            android:id="@+id/payment_data"
-	            android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-        		style="@style/ContentSectionTitle"
+	            style="@style/ContentSectionTitle"
 	            android:text="@string/payment_data" />
 	
 	        <View 
-	            android:layout_width="fill_parent"
-		        style="@style/BorderHorizontal" />
+	            style="@style/BorderHorizontal" />
 
 	        <LinearLayout
-		        android:layout_width="fill_parent"
+		        android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal" >
 		        
 	            <EditText
 				    android:id="@+id/payment_amount"
 				    android:hint="@string/payment_amount"
-				    android:layout_width="wrap_content"
-					style="@style/ContentText"
+				    style="@style/ContentText2"
 			        android:inputType="number"
 			        android:layout_weight="1" />	        
 		        
@@ -170,33 +115,22 @@
 			        android:layout_width="0dip"
 					android:layout_height="0dip"
 					android:layout_weight="1" />
-	            
-		        <!-- Spinner
-			        android:id="@+id/spinner_payment_currency"
-			        android:layout_width="wrap_content"
-        			android:layout_height="wrap_content"
-        			style="@style/Spinner"
-			        android:entries="@array/payment_currency"
-			        android:layout_weight="1" /-->
 			        
 			    <Button
 			        android:id="@+id/button_payment_currency"
-			        android:layout_width="wrap_content"
-	        		style="@style/ListButton"
+			        style="@style/ListButton2"
         			android:text="@string/payment_currency"
 			        android:layout_weight="1" />
 	        </LinearLayout>	
 		        
 	        <LinearLayout
-		        android:layout_width="fill_parent"
+		        android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal" >
 	        	
 	        	<TextView
 		            android:id="@+id/execution_date"
-		            android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					style="@style/ContentSectionLabel"
+		            style="@style/ContentSectionLabel2"
 		            android:text="@string/execution_date"
 			        android:layout_weight="1" />
 	        
@@ -208,8 +142,7 @@
 	        	<TextView
 				    android:id="@+id/payment_date"
 				    android:text="@string/payment_date"
-				    android:layout_width="wrap_content"
-					style="@style/ContentText"
+				    style="@style/ContentText2"
 				    android:onClick="showTimePickerDialog"
 			        android:layout_weight="1" />	        
 	        </LinearLayout>	
@@ -217,22 +150,17 @@
             <EditText
 			    android:id="@+id/payment_details"
 			    android:hint="@string/payment_details"
-			    android:layout_width="fill_parent"
-				style="@style/ContentTextArea"
+			    style="@style/ContentTextArea"
 		        android:inputType="text" />	        
 	        
 	        <LinearLayout
 		        android:id="@+id/optional_data"
-			    android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
+			    android:orientation="horizontal"
 				style="@style/ContentSectionLayout" >
 	
 	            <TextView
 		            android:id="@+id/optional_data_title"
-		            android:layout_height="wrap_content"
-					android:layout_width="wrap_content"
-					style="@style/ContentSectionTitle_Small"
+		            style="@style/ContentSectionTitle_Small"
 		            android:text="@string/optional_data" />
 		    	
 		    	<LinearLayout
@@ -242,72 +170,58 @@
 		    
 			    <ImageView
 			        android:id="@+id/optional_data_arrow"
-			        android:layout_height="wrap_content"
-					style="@style/OptionalDataImage"
+			        style="@style/OptionalDataImage"
 			        android:src="@drawable/arrow_down" />
 	        </LinearLayout>
 	        
 	        <View 
-	            android:layout_width="fill_parent"
-		        style="@style/BorderHorizontal" />
+	            style="@style/BorderHorizontal" />
 	
 	        <LinearLayout
 		        android:id="@+id/optional_data_layout"
-        		android:layout_width="fill_parent"
+        		android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:orientation="vertical"
 				android:visibility="gone" >
 			    
 		        <TextView
 		            android:id="@+id/optional_payer_name"
-		            android:layout_width="fill_parent"
-	        		android:layout_height="wrap_content"
-	        		style="@style/ContentSectionLabel"
+		            style="@style/ContentSectionLabel"
 		            android:text="@string/optional_payer_name" />
 	        
 		        <EditText
 				    android:id="@+id/optional_data_1"
-				    android:layout_width="fill_parent"
-					style="@style/ContentText"
+				    style="@style/ContentText"
 			        android:inputType="text" />	        
 		        
 		        <TextView
 		            android:id="@+id/optional_debtor_reference"
-		            android:layout_width="fill_parent"
-	        		android:layout_height="wrap_content"
-	        		style="@style/ContentSectionLabel"
+		            style="@style/ContentSectionLabel"
 		            android:text="@string/optional_debtor_reference" />
 		        			    		    
 	            <EditText
 				    android:id="@+id/optional_data_2"
-				    android:layout_width="fill_parent"
-					style="@style/ContentText"
+				    style="@style/ContentText"
 			        android:inputType="text" />	        
 	
 	            <TextView
 		            android:id="@+id/optional_creditor_reference"
-		            android:layout_width="fill_parent"
-	        		android:layout_height="wrap_content"
-	        		style="@style/ContentSectionLabel"
+		            style="@style/ContentSectionLabel"
 		            android:text="@string/optional_creditor_reference" />
 	            
 	            <EditText
 				    android:id="@+id/optional_data_3"
-				    android:layout_width="fill_parent"
-					style="@style/ContentText"
+				    style="@style/ContentText"
 			        android:inputType="text" />	  
 			        
 	            <CheckBox android:id="@+id/optional_data_urgent"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
 			        style="@style/CheckBox"
 			        android:text="@string/optional_data_urgent"/>
             </LinearLayout>
             
 		    <Button
 		        android:id="@+id/button_next"
-		        android:layout_width="fill_parent"
-				style="@style/ButtonNext"
+		        style="@style/ButtonNext2"
 		        android:text="@string/button_next"
 		        android:onClick="showNextStep" />
 

@@ -64,9 +64,14 @@
        <item name="android:background">@color/background_border</item>
        <item name="android:layout_weight">0.0</item>
        <item name="android:layout_height">2.0dip</item>
+       <item name="android:layout_width">match_parent</item>
        <item name="android:layout_marginTop">7.0dip</item>
    </style>
-
+			        
+   <style name="BorderHorizontal_margin" parent="@style/BorderHorizontal">
+       <item name="android:layout_marginBottom">10.0dip</item>
+   </style>
+   
    <style name="ButtonNext">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/title_text</item>
@@ -78,18 +83,25 @@
        <item name="android:gravity">center_vertical|center_horizontal</item>
    </style>
    
-   <style name="BorderHorizontal_margin" parent="@style/BorderHorizontal">
-       <item name="android:layout_marginBottom">10.0dip</item>
-   </style>
+   <style name="ButtonNext2" parent="@style/ButtonNext">
+       <item name="android:layout_width">match_parent</item>
+   </style>   
+
+   <style name="ButtonNext3" parent="@style/ButtonNext">
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_weight">1</item>
+   </style>   
    
    <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
-	   <item name="android:textSize">18.0sp</item>
+	   <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_text</item>
        <item name="android:button">@drawable/check_box</item>
        <item name="android:layout_marginTop">8.0dip</item>
        <item name="android:paddingLeft">10dp</item>
    </style>
-        
+			        
    <style name="Content">
        <item name="android:paddingLeft">10.0dip</item>
        <item name="android:paddingRight">10.0dip</item>
@@ -104,7 +116,7 @@
    <style name="ContentLabel">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_label</item>
-       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_width">match_parent</item>
        <item name="android:layout_height">wrap_content</item>
    </style>  
 
@@ -112,22 +124,37 @@
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_title</item>
        <item name="android:layout_marginTop">20dip</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">match_parent</item>
    </style>   
 
+   <style name="ContentSectionTitle2" parent="@style/ContentSectionTitle">
+       <item name="android:layout_height">match_parent</item>
+   </style>   
+       	        		
    <style name="ContentSectionTitle_Small" parent="@style/ContentSectionTitle">
+       <item name="android:layout_width">wrap_content</item>
        <item name="android:layout_marginTop">0dip</item>
    </style>  
    
    <style name="ContentSectionLayout">
        <item name="android:layout_marginTop">16dip</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">match_parent</item>
    </style> 
-      
+				
    <style name="ContentSectionLabel" parent="@style/ContentSectionTitle">
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">match_parent</item>
        <item name="android:layout_marginTop">12dip</item>
        <item name="android:layout_marginBottom">0dip</item>
        <item name="android:textColor">@color/content_label</item>
    </style>  
 
+   <style name="ContentSectionLabel2" parent="@style/ContentSectionLabel">
+       <item name="android:layout_width">wrap_content</item>
+   </style>
+   
    <style name="ContentSectionLabel_light" parent="@style/ContentSectionLabel">
        <item name="android:textColor">@color/content_label_light</item>
    </style>
@@ -136,10 +163,13 @@
        <item name="android:textSize">16.0sp</item>
        <item name="android:textColor">@color/content_label_data</item>
        <item name="android:layout_marginTop">0dip</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">match_parent</item>
    </style>
-      
+      		
    <style name="ContentText">
        <item name="android:layout_height">45dip</item>
+       <item name="android:layout_width">match_parent</item>
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_text</item>
        <item name="android:textColorHint">@color/content_text</item>
@@ -148,9 +178,9 @@
        <item name="android:padding">8dp</item>
    </style>  
    
-   <style name="ContentTextDialog">
-       <item name="android:layout_marginTop">20.0dip</item>
-   </style>
+   <style name="ContentText2" parent="@style/ContentText">
+       <item name="android:layout_width">wrap_content</item>
+   </style>  
    
    <style name="ContentTextArea" parent="@style/ContentText">
        <item name="android:layout_height">120dip</item>
@@ -162,6 +192,8 @@
        <item name="android:textColor">@color/content_text</item>
        <item name="android:layout_gravity">center_vertical|center</item>
        <item name="android:gravity">center</item>
+       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_height">wrap_content</item>
    </style>
    
     
@@ -175,23 +207,10 @@
        <item name="android:textSize">20.0sp</item>
        <item name="android:padding">10dp</item>
     </style>
-      
+   
 	<style name="Dialog" parent="@android:style/Theme.Dialog">
 	    <item name="android:windowNoTitle">true</item>
-        <!-- item name="android:windowTitleStyle">@style/Dialog_style</item>
-		<item name="android:background">@drawable/step1</item>
-	    <item name="android:windowBackground">@android:color/transparent</item-->
 	</style>
-	
-	<style name="Dialog_style" parent="android:Widget.TextView">
-       <item name="android:textStyle">bold</item>
-       <item name="android:textSize">20.0sp</item>
-       <item name="android:textColor">@color/content_text</item>
-	   <item name="android:layout_gravity">center_vertical|center</item>
-       <item name="android:gravity">center</item>
-	   <item name="android:background">@color/background_app</item>
-	   <item name="android:padding">10dp</item>
-	</style>   
    
    <style name="HeaderLogoImage">
        <item name="android:layout_width">25dp</item>
@@ -220,8 +239,9 @@
 
    <style name="HeaderStepImages">
        <item name="android:layout_width">25dp</item>
+       <item name="android:layout_height">wrap_content</item>
    </style>
-
+						
    <style name="HeaderStep">
        <item name="android:textSize">14.0sp</item>
        <item name="android:textColor">@color/background_header</item>
@@ -258,11 +278,16 @@
    <style name="ListButton" parent="@style/ContentText">
        <item name="android:layout_marginTop">12dp</item>
        <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">match_parent</item>
        <item name="android:background">@drawable/dr_spinner</item>
        <item name="android:textColor">@color/content_label</item>
        <item name="android:gravity">center_vertical</item>
    </style>
-
+   
+   <style name="ListButton2" parent="@style/ListButton">
+       <item name="android:layout_width">wrap_content</item>
+   </style>
+        		
    <style name="ListButton_error" parent="@style/ListButton">
        <item name="android:background">@drawable/dr_spinner_error</item>
        <item name="android:textColor">@color/content_label_error</item>
@@ -283,22 +308,24 @@
        <item name="android:background">@color/background_menu_border</item>
        <item name="android:layout_weight">0.0</item>
        <item name="android:layout_height">1.0dip</item>
+       <item name="android:layout_width">match_parent</item>
    </style>
    
    <style name="MenuBorderVertical">
        <item name="android:background">@color/background_menu_border</item>
        <item name="android:layout_weight">0.0</item>
+       <item name="android:layout_height">match_parent</item>
        <item name="android:layout_width">1.0dip</item>
-   </style>
+   </style>	    
 
-   <style name="Menu_layout">
+   <style name="MenuLayout">
        <item name="android:gravity">center</item>
        <item name="android:layout_gravity">left|top</item>
        <item name="android:layout_height">wrap_content</item>
-       <item name="android:layout_width">fill_parent</item>
+       <item name="android:layout_width">match_parent</item>
    </style> 
    
-   <style name="Menu_button">
+   <style name="MenuButton">
        <item name="android:gravity">left|center_vertical</item>
        <item name="android:paddingLeft">10.0dip</item>
        <item name="android:layout_height">50dip</item>
@@ -309,7 +336,7 @@
        <item name="android:drawablePadding">10dp</item>
     </style>  
     
-    <style name="Menu_usernames">
+    <style name="MenuUsernames">
        <item name="android:popupBackground">@color/background_header</item>
        <item name="android:layout_height">48dip</item>
        <item name="android:layout_width">200dip</item>
@@ -318,26 +345,37 @@
    <style name="MessageLabelData">
        <item name="android:textSize">16.0sp</item>
        <item name="android:textColor">@color/message_label_text</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">wrap_content</item>
        <item name="android:layout_gravity">center</item>
        <item name="android:gravity">left|center_horizontal</item>
-       </style>
- 
-   <style name="MessageSendLabelData" parent="@style/MessageLabelData">
-       <item name="android:textColor">@color/message_send_label_text</item>
-   </style>   
+   </style>
    
+   <style name="MessageSendLabelData" parent="@style/MessageLabelData">
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:textColor">@color/message_send_label_text</item>
+   </style>  
+	        		   
    <style name="OptionalDataImage">
        <item name="android:layout_width">25dp</item>
+       <item name="android:layout_height">wrap_content</item>
        <item name="android:layout_marginTop">5dp</item>
    </style>
+					
           
    <style name="RadioGroup">
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">match_parent</item>
+       <item name="android:orientation">horizontal</item>
        <item name="android:paddingTop">12.0dip</item>
    </style>
-   
+		        	   
    <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
        <item name="android:textSize">18.0sp</item>
        <item name="android:textColor">@color/content_label</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_width">wrap_content</item>
        <item name="android:button">@drawable/radio_button</item>
        <item name="android:paddingLeft">10dp</item>
    </style>
@@ -346,42 +384,40 @@
        <item name="android:background">@color/background_app</item>
    </style>	
 
-   <style name="Row_header">
+   <style name="RowHeader">
        <item name="android:background">@color/background_app</item>
    </style>	
    
-   <style name="Row_icon">
+   <style name="RowIcon">
        <item name="android:padding">4.0dip</item>
        <item name="android:layout_height">40.0dip</item>
        <item name="android:layout_width">40.0dip</item>
    </style>
 
-   <style name="Row_header_text">
+   <style name="RowHeaderText">
        <item name="android:gravity">center_vertical</item>
        <item name="android:padding">4.0dip</item>
-       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_width">0dp</item>
+       <item name="android:layout_height">match_parent</item>
+       <item name="android:layout_weight">1</item>
        <item name="android:textSize">14.0sp</item>
        <item name="android:textColor">@color/content_label_data</item>
    </style>   
-
-   <style name="Row_header_text">
-       <item name="android:gravity">center_vertical</item>
-       <item name="android:padding">4.0dip</item>
-       <item name="android:layout_width">match_parent</item>
-       <item name="android:textSize">14.0sp</item>
-       <item name="android:textColor">@color/content_label_data</item>
-   </style>   
-   
-   <style name="Row_list_text">
+           
+   <style name="RowListText">
        <item name="android:gravity">center_vertical</item>
        <item name="android:padding">10.0dip</item>
        <item name="android:textSize">18.0sp</item>
+       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_height">wrap_content</item>
    </style>
    
-   <style name="Row_text">
+   <style name="RowText">
        <item name="android:gravity">center_vertical</item>
        <item name="android:padding">4.0dip</item>
-       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_width">0dp</item>
+       <item name="android:layout_height">match_parent</item>
+       <item name="android:layout_weight">1</item>
        <item name="android:textSize">14.0sp</item>
        <item name="android:textColor">@color/content_title</item>
    </style>

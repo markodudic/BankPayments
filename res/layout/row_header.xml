@@ -2,14 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/row_layout"
     android:layout_width="match_parent"
-    style="@style/Row_header"
+    style="@style/RowHeader"
     android:orientation="horizontal" >
 
     <TextView
         android:id="@+id/row_title"
-        style="@style/Row_header_text"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        style="@style/RowHeaderText" />
 
 </LinearLayout>

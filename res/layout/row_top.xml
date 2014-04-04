@@ -7,12 +7,12 @@
 
     <Spinner
         android:id="@+id/spinner_menu_usernames"
-        style="@style/Menu_usernames"
+        style="@style/MenuUsernames"
         android:entries="@array/menu_usernames" />
     
 	<LinearLayout 
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
 	    android:orientation="horizontal"
 	    android:gravity="right|center_vertical" >
 	    

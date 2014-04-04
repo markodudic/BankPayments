@@ -7,13 +7,10 @@
 
     <ImageView
         android:id="@+id/row_icon"
-        style="@style/Row_icon" />
+        style="@style/RowIcon" />
 
     <TextView
         android:id="@+id/row_title"
-        style="@style/Row_text"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        style="@style/RowText" />
 
 </LinearLayout>
